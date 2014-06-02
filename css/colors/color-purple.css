@@ -1,0 +1,74 @@
+input.submit:hover {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+}
+.error .left {
+	color: #9a86a2;
+}
+.error .right {
+	background-color: #9a86a2;
+}
+#back-top a:hover {
+	background-color: #9a86a2;
+}
+#primary-menu ul ul li a:hover {
+	background-color: #9a86a2;
+	color: #FFFFFF;
+}
+.skills-graph li span {
+	background-color:#9a86a2;
+}
+.button.grey:hover {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+}
+.highlight1 {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+}
+.post-media.link a:hover {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+}
+#load-more a:hover, #load-more a.active {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+}
+.wp-pagenavi a:hover, .wp-pagenavi span.current {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+} 
+#comment-list .reply a:hover {
+	background-color: #9a86a2;
+}
+.tags a {
+	color: #FFFFFF;
+	background-color: #9a86a2;
+}
+.archive-list ul li a:hover {	
+	color: #FFFFFF;
+	background-color: #9a86a2; 
+}
+.archive-list .tags a:hover {
+	color: #FFFFFF;	
+	background-color: #9a86a2; 
+}
+#comment-list .reply a:hover, #comment-list ul.children .reply a:hover {
+	color: #FFFFFF;	
+	background-color: #9a86a2; 
+}
+.flex-direction-nav a:hover {	
+	background-color: #9a86a2; 
+}
+div.jp-play-bar {
+	background-color: #9a86a2;
+}
+div.jp-volume-bar-value {
+	background-color: #9a86a2;
+}
+ul.item-nav li:hover {
+	background-color: #9a86a2;
+}
+#prevslide:hover, #nextslide:hover  {	
+	background-color: #9a86a2; 
+}

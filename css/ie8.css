@@ -1,0 +1,9 @@
+#content-wrapper { margin-top: 100px; float: left; }
+.section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 { float: left; }
+.portfolio-grid ul li { width: 15.665%; }
+.thumb .mask { background-color: #f7f7f7; }
+#inner-content .blog-holder .post { width: 32.33%; } 
+.post { width: 23.98%; } 
+.post-entry, .post-media blockquote,.post-media.video {	overflow: hidden; }
+.error { width: 98.5%; margin: 0 auto; }
+
