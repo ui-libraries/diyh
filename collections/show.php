@@ -7,7 +7,7 @@ if ($collectionTitle == '') {
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
 
-<div id="content-wrapper">
+<div id="primary">
 
 <div class="content">
 
@@ -53,7 +53,7 @@ if ($collectionTitle == '') {
 
 </div><!--END CONTENT-->    
     
-</div><!--END CONTENT-WRAPPER-->
+</div><!--END PRIMARY-->
 
 
 
