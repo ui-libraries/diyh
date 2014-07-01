@@ -385,7 +385,7 @@ a:hover {
 	list-style-type: none;
 }
 #primary-menu ul li:hover { 
-	visibility: inherit; 
+	visibility: inherit;	 
 }
 #primary-menu ul li {
 	position: relative;
@@ -458,7 +458,7 @@ a:hover {
     background: #333; 
 }
 #primary-menu ul ul li a:hover { 
-    color: #333;    
+    color: white;   
 }
 /*--------------------------------------------------
 		  SECTION TITLE
@@ -951,7 +951,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 	display: block;
 	list-style-type: none;
 	width: 101%;
-	float: left;
+	
 	margin: 0 0 0 -1%;
 	padding: 0px;
 }
@@ -980,28 +980,28 @@ ul.tabs li a:hover, ul.tabs li.active a {
     z-index: 1;
 }
 @media screen and (min-width: 1821px) {
-.portfolio-grid ul li { width: 15.665%; } /* catch-all for huge screen sizes */
+.portfolio-grid ul li { width: 200px; } /* catch-all for huge screen sizes. 15.665% original */
 }
 @media screen and (max-width: 1820px) {
-.portfolio-grid ul li { width: 18.995%; }
+.portfolio-grid ul li { width: 200px; } /*18.995%*/
 }
 @media screen and (max-width: 1560px) {
-.portfolio-grid ul li { width: 18.995%; }
+.portfolio-grid ul li { width: 200px; }
 }
 @media screen and (max-width: 1300px) {
-.portfolio-grid ul li { width: 23.995%; }
+.portfolio-grid ul li { width: 200px; }
 }
 @media screen and (max-width: 1040px) {
-.portfolio-grid ul li { width: 32.32%; }
+.portfolio-grid ul li { width: 200px; }
 }
 @media screen and (max-width: 780px) {
-.portfolio-grid ul li { width: 48.90%; }
+.portfolio-grid ul li { width: 200px; }
 }
 @media screen and (max-width: 520px) {
-.portfolio-grid ul li { width: 100%; padding: 0 0 20px 0; }
+.portfolio-grid ul li { width: 200px; padding: 0 0 20px 0; }
 }
 @media screen and (max-width: 260px) {
-.portfolio-grid ul li { width: 100%; padding: 0 0 20px 0; }
+.portfolio-grid ul li { width: 200px; padding: 0 0 20px 0; }
 }
 .item-info {
 	padding: 5px 15px 20px 10px; /*modified by mb to make title fit in box */
