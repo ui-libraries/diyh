@@ -36,10 +36,10 @@ if ($collectionTitle == '') {
                             <div class="item-info">
                                 <h3 class="title"><a href="#"><?php echo link_to_item($itemTitle); ?></a></h3>
                             </div><!--END ITEM-INFO-->  
-                            <div class="item-info-overlay">
+                            <!-- <div class="item-info-overlay">
                                 <div>                                    
                                     <p>Progress bar or maybe a little description</p>
-                                    <?php echo link_to_item($itemTitle, array('class'=>'view')); ?>                                                       
+                                    <?php //echo link_to_item($itemTitle, array('class'=>'view')); ?>                                                       
                                 </div>                  
                             </div><!--END ITEM-INFO-OVERLAY-->
                         </div><!--END ITEM-->                   

@@ -45,6 +45,8 @@
     });         
 </script>
 
+
+
 <div id="controls-wrapper" class="load-item">
 
     <div id="controls">
@@ -54,44 +56,14 @@
         
         <div id="slidecounter">
             <span class="slidenumber"></span>  <span class="totalslides"></span>       
-        </div><!--END SLIDECOUNTER-->
-            
-        <div id="slidecaption"></div><!--END SLIDECAPTION-->
-        
-    </div><!--END CONTROLS-->
+        </div>
+        <div id="slidecaption"></div>
+    </div>
         
     <ul id="slide-list"></ul>
     
-</div><!--END CONTROLS-WRAPPER-->
+</div>
 
-<div id="slideshow">
 
-    <?php /*if ($homepageText = get_theme_option('Homepage Text')): ?>
-    <p><?php echo $homepageText; ?></p>
-    <?php endif; ?>
-	
-	
-    <?php 
-        
-        $collections = get_records('Collection', array(), 999);
-        foreach ($collections as $collection) {
-            set_current_record('Collection', $collection);
+<div id="slideshow"></div>      
 
-                echo '<h2>'.link_to_collection().'</h2>'; 
-                echo "<br>";
-
-                $items = get_records('Item', array('collection'=>$collection), 999);
-                
-                foreach ($items as $item) {
-                      set_current_record('Item', $item);
-		              echo link_to_item(item_image('square_thumbnail', array('alt' =>metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink'))));           
-		              echo '<br>';
-                }              
-                
-        }
-
-     */ ?>
-
-</div><!-- end primary -->
-
-<?php //echo foot(); ?>

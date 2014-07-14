@@ -57,8 +57,8 @@
                     
                 <ul class="menu">
                     <li><a href="/omeka">Home</a></li>
-                    <li><a href="">Start Transcribing</a></li>
-                    <li><a href="about">About</a></li>                   
+                    <li><a href="http://s-lib018.lib.uiowa.edu/omeka/transcribe/171/14458">Start Transcribing</a></li>
+                    <li><a href="/omeka/about">About</a></li>                   
                     <li><a href="#">Collections</a>       
                         <ul>
                             <li><a href="/omeka/collections/show/12">Pioneer Lives</a></li>

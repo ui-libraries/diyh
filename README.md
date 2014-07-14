@@ -1,4 +1,4 @@
-diyh
+scribe2
 =======
 
-updated DIY History theme for Omeka 2
+updated Scribe theme for Omeka 2
