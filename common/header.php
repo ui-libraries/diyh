@@ -14,6 +14,7 @@
     queue_css_file('socialize-bookmarks');
     queue_css_file('prettyPhoto');
     queue_css_file('supersized');
+    queue_css_file('bootstrap.min');
 
     echo head_css();
     ?>
