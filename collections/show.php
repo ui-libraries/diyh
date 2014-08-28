@@ -33,6 +33,16 @@ if ($collectionTitle == '') {
                     <li class="not-started">
                         <div class="item">
                             <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
+                            <div class="progress">
+                                <div class="bar" style="width: <?php 
+                                    $percentNeedsReview = metadata ('item', array('Scriptus', 'Percent Needs Review'));
+                                    $percentCompleted = metadata ('item', array('Scriptus', 'Percent Completed'));
+                                    $totalPercent = $percentNeedsReview + $percentCompleted;
+                                    echo $totalPercent;
+                                    ?>%;">
+                                     <!--TODO: fix this<span class="sr-only">0% Complete </span>-->
+                                </div>
+                            </div>
                             <div class="item-info">
                                 <h3 class="title"><a href="#"><?php echo link_to_item($itemTitle); ?></a></h3>
                             </div><!--END ITEM-INFO-->  
