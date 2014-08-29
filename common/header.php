@@ -62,12 +62,13 @@
                     <li><a href="/omeka/about">About</a></li>                   
                     <li><a href="#">Collections</a>       
                         <ul>
-                            <li><a href="/omeka/collections/show/12">Pioneer Lives</a></li>
-                            <li><a href="/omeka/collections/show/9">Iowa Women’s Lives: Letters and Diaries</a></li>
-                            <li><a href="/omeka/collections/show/7">Szathmary Culinary Manuscripts and Cookbooks</a></li>
-                            <li><a href="/omeka/collections/show/11">Building the Transcontinental Railroad</a></li>
-                            <li><a href="/omeka/collections/show/6">Nile Kinnick Collection</a></li> 
-                            <li><a href="/omeka/collections/show/8">Civil War Diaries and Letters</a></li>
+                            <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL() ?>
+                            <li><a href="<?php echo $baseURL;?>/collections/show/12">Pioneer Lives</a></li>
+                            <li><a href="<?php echo $baseURL;?>/collections/show/9">Iowa Women’s Lives: Letters and Diaries</a></li>
+                            <li><a href="<?php echo $baseURL;?>/collections/show/7">Szathmary Culinary Manuscripts and Cookbooks</a></li>
+                            <li><a href="<?php echo $baseURL;?>/collections/show/11">Building the Transcontinental Railroad</a></li>
+                            <li><a href="<?php echo $baseURL;?>/collections/show/6">Nile Kinnick Collection</a></li> 
+                            <li><a href="<?php echo $baseURL;?>/collections/show/8">Civil War Diaries and Letters</a></li>
 
                         </ul>       
                     </li>

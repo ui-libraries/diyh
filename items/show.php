@@ -50,7 +50,8 @@ if ($itemTitle == '') {
                         <div class="item">
                             <?php echo '<a href="' . $uri . $file->item_id . '/' . $file->id . '">' . file_image('square_thumbnail', array('alt' => $fileTitle)) .'</a>' ?>
                             <div class="item-info">
-                                <h3 class="title"><?php echo '<a href="https://s-lib018.lib.uiowa.edu/omeka/transcribe/'.$file->item_id.'/'.$file->id.'">' . $fileTitle . '</a>'; ?></h3>
+                               <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL(); ?>
+                                <h3 class="title"><?php echo '<a href="'. $baseURL . '/transcribe/' . $file->item_id.'/'.$file->id.'">' . $fileTitle . '</a>'; ?></h3>
                                 <?php 
                                     if ($status == 'Not Started') {
                                         echo '<span class="label label-success">Not Started</span>';
