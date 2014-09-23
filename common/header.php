@@ -9,12 +9,13 @@
 
     <!-- Stylesheets -->
     <?php
-    queue_css_file('style');
+    
     queue_css_file('blog');
     queue_css_file('socialize-bookmarks');
     queue_css_file('prettyPhoto');
     queue_css_file('supersized');
     queue_css_file('bootstrap.min');
+    queue_css_file('style');
 
     echo head_css();
     ?>
@@ -49,21 +50,20 @@
     <div id="header-wrapper">
 
         <div class="header">    
-             <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL() ?>
+            
             <div id="logo"> 
-                <a href="<?php echo $baseURL;?>"><img src="<?php echo img('logo.png'); ?>" alt="" /></a>   
+                <a href=""><img src="<?php echo img('logo.png'); ?>" alt="" /></a>   
             </div><!--END LOGO-->
             
             <div id="primary-menu">
                     
                 <ul class="menu">
-          
-                    <li><a href="<?php echo $baseURL;?>/omeka">Home</a></li>
-                    <li><a href="<?php echo $baseURL;?>/transcribe/171/14458">Start Transcribing</a></li>
-                    <li><a href="<?php echo $baseURL;?>/about">About</a></li>                   
+                    <li><a href="/omeka">Home</a></li>
+                    <li><a href="http://s-lib018.lib.uiowa.edu/omeka/transcribe/171/14458">Start Transcribing</a></li>
+                    <li><a href="/omeka/about">About</a></li>                   
                     <li><a href="#">Collections</a>       
                         <ul>
-                            
+                            <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL() ?>
                             <li><a href="<?php echo $baseURL;?>/collections/show/12">Pioneer Lives</a></li>
                             <li><a href="<?php echo $baseURL;?>/collections/show/9">Iowa Women’s Lives: Letters and Diaries</a></li>
                             <li><a href="<?php echo $baseURL;?>/collections/show/7">Szathmary Culinary Manuscripts and Cookbooks</a></li>
@@ -73,9 +73,7 @@
 
                         </ul>       
                     </li>
-                    <!--<li><a href="<?php echo $baseURL;?>/admin/users/login">Login</a></li>-->
-
-                    <li><a href="<?php echo $baseURL;?>/contact.html">Contact</a></li>
+                    <li><a href="contact.html">Contact</a></li>
 
                 </ul><!--END UL MENU-->
                    
