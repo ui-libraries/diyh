@@ -61,8 +61,7 @@
             <div id="primary-menu">
                     
                 <ul class="menu">
-                    <li><a href="/omeka">Home</a></li>
-                    <li><a href="<?php echo WEB_ROOT . '/transcribe/171/14458'; ?>">Start Transcribing</a></li>
+                    <li><a href="/omeka">Home</a></li>                    
                     <li><a href="<?php echo WEB_ROOT;?>/about">About</a></li>                   
                     <li><a href="#">Collections</a>       
                         <ul>                            
@@ -75,14 +74,14 @@
 
                         </ul>       
                     </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="<?php echo WEB_ROOT;?>/contact">Contact</a></li>
 
                 </ul><!--END UL MENU-->
                    
             </div><!--END PRIMARY MENU-->   
                             
             <ul class="social-bookmarks">
-                <li><?php echo search_form(array('show_advanced' => false)); ?> </li>       
+                <li><div id="searchbox"><?php echo search_form(array('show_advanced' => false)); ?></div></li>       
                 <li class="twitter"><a href="https://twitter.com/DIY_History">twitter</a></li>
                 <li class="rss"><a href="http://blog.lib.uiowa.edu/drp/">blog</a></li>                         
             </ul><!--END SOCIAL-BOOKMARKS-->

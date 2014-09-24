@@ -697,10 +697,12 @@ ul.latest-posts li span.date {
 	text-align:center;
 	display:inline-block;
 	margin-right: 5px;
+	margin-left: 5px;
 	margin-bottom: 5px;
 	-moz-border-radius: 2px;
 	-webkit-border-radius:2px;
 	border-radius:2px;
+	background-color: #333;
 }
 .button.right {
 	float:right;

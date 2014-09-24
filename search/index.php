@@ -1,16 +1,13 @@
 <?php
 $pageTitle = __('Search Omeka ') . __('(%s total)', $total_results);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
-
-$searchRecordTypes = get_search_record_types();
-
 ?>
 <br /><br /><br /><h1> Search Results </h1>
-
+<?php echo search_form(array('show_advanced' => true)); ?> 
 <?php if ($total_results): ?>
 <?php echo pagination_links(); ?>
 
-
+<script>$("#searchbox").remove();</script>
 <table id="search-results" class="table table-striped">
     <thead>
         <tr>
