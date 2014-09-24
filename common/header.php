@@ -19,6 +19,7 @@
 
     echo head_css();
     ?>
+    <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900italic' rel='stylesheet' type='text/css'>
     <!-- JavaScripts -->
     <?php queue_js_file('vendor/modernizr'); ?>
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
@@ -32,8 +33,10 @@
     <?php queue_js_file('vendor/supersized.shutter.min'); ?>
     <?php queue_js_file('vendor/filter-fade-portfolio'); ?>
 
+
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
+
     
 </head>
 
@@ -52,24 +55,23 @@
         <div class="header">    
             
             <div id="logo"> 
-                <a href=""><img src="<?php echo img('logo.png'); ?>" alt="" /></a>   
+                <a href="<?php echo WEB_ROOT; ?>"><img src="<?php echo img('logo.png'); ?>" alt="" /></a>   
             </div><!--END LOGO-->
             
             <div id="primary-menu">
                     
                 <ul class="menu">
                     <li><a href="/omeka">Home</a></li>
-                    <li><a href="http://s-lib018.lib.uiowa.edu/omeka/transcribe/171/14458">Start Transcribing</a></li>
-                    <li><a href="/omeka/about">About</a></li>                   
+                    <li><a href="<?php echo WEB_ROOT . '/transcribe/171/14458'; ?>">Start Transcribing</a></li>
+                    <li><a href="<?php echo WEB_ROOT;?>/about">About</a></li>                   
                     <li><a href="#">Collections</a>       
-                        <ul>
-                            <?php $baseURL = Zend_Controller_Front::getInstance()->getRequest()->getBaseURL() ?>
-                            <li><a href="<?php echo $baseURL;?>/collections/show/12">Pioneer Lives</a></li>
-                            <li><a href="<?php echo $baseURL;?>/collections/show/9">Iowa Women’s Lives: Letters and Diaries</a></li>
-                            <li><a href="<?php echo $baseURL;?>/collections/show/7">Szathmary Culinary Manuscripts and Cookbooks</a></li>
-                            <li><a href="<?php echo $baseURL;?>/collections/show/11">Building the Transcontinental Railroad</a></li>
-                            <li><a href="<?php echo $baseURL;?>/collections/show/6">Nile Kinnick Collection</a></li> 
-                            <li><a href="<?php echo $baseURL;?>/collections/show/8">Civil War Diaries and Letters</a></li>
+                        <ul>                            
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/12">Pioneer Lives</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/9">Iowa Women’s Lives: Letters and Diaries</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/7">Szathmary Culinary Manuscripts and Cookbooks</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/11">Building the Transcontinental Railroad</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/6">Nile Kinnick Collection</a></li> 
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/8">Civil War Diaries and Letters</a></li>
 
                         </ul>       
                     </li>
@@ -82,8 +84,7 @@
             <ul class="social-bookmarks">
                 <li><?php echo search_form(array('show_advanced' => false)); ?> </li>       
                 <li class="twitter"><a href="https://twitter.com/DIY_History">twitter</a></li>
-                <li class="rss"><a href="http://blog.lib.uiowa.edu/drp/">blog</a></li>
-                <li class="flickr"><a href="https://www.flickr.com/photos/uiowa/">flickr</a></li>          
+                <li class="rss"><a href="http://blog.lib.uiowa.edu/drp/">blog</a></li>                         
             </ul><!--END SOCIAL-BOOKMARKS-->
                      
             <div id="back-top">
