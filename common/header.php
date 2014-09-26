@@ -7,6 +7,10 @@
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
 
+
+    <?php /*IMPORTANT: This line is necessary for GuestUserPlugin and any other plugins to look and work as they should on the front-end*/
+    fire_plugin_hook('public_head', array('view'=>$this)); ?>
+
     <!-- Stylesheets -->
     <?php
     queue_css_file('style');
@@ -15,6 +19,7 @@
     queue_css_file('prettyPhoto');
     queue_css_file('supersized');
     queue_css_file('bootstrap.min');
+    /*queue_css_file('admin-bar');*/
 
     echo head_css();
     ?>
@@ -23,6 +28,9 @@
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
     <?php queue_js_file('vendor/jquery.1.4.4'); ?>
     <?php queue_js_file('custom'); ?>
+    <?php queue_js_file('vendor/jquery-1.11.1.min'); ?>
+
+    <?php queue_js_file('vendor/bootstrap.min'); ?>
     <?php queue_js_file('twitter'); ?>
     <?php queue_js_file('vendor/bra.photostream'); ?>
     <?php queue_js_file('vendor/prettyPhoto'); ?>
@@ -30,7 +38,6 @@
     <?php queue_js_file('vendor/supersized.3.2.7.min'); ?>
     <?php queue_js_file('vendor/supersized.shutter.min'); ?>
     <?php queue_js_file('vendor/filter-fade-portfolio'); ?>
-
     <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
     
@@ -58,7 +65,7 @@
                     
                 <ul class="menu">
           
-                    <li><a href="<?php echo $baseURL;?>/omeka">Home</a></li>
+                    <li><a href="<?php echo $baseURL;?>">Home</a></li>
                     <li><a href="<?php echo $baseURL;?>/transcribe/171/14458">Start Transcribing</a></li>
                     <li><a href="<?php echo $baseURL;?>/about">About</a></li>                   
                     <li><a href="#">Collections</a>       
