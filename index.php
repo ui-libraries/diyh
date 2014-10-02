@@ -46,24 +46,26 @@
 </script>
 
 
-
+<div id="calltoaction"><a href="http://s-lib018.lib.uiowa.edu/omeka/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>"></a></div>
 <div id="controls-wrapper" class="load-item">
 
     <div id="controls">
     
         <a id="prevslide" class="load-item"></a>
-        <a id="nextslide" class="load-item"></a>
-        
-        <div id="slidecounter">
-            <span class="slidenumber"></span>  <span class="totalslides"></span>       
-        </div>
+        <a id="nextslide" class="load-item"></a>        
+
         <div id="slidecaption"></div>
+
     </div>
-        
-    <ul id="slide-list"></ul>
+      
+
+
     
 </div>
 
 
-<div id="slideshow"></div>      
+<div id="slideshow"></div></div>    
+
+
+
 

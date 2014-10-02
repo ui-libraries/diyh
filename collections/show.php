@@ -11,7 +11,8 @@ if ($collectionTitle == '') {
 
 <div class="content">
 
-<div class="section-title">     
+<div class="section-title">    
+        <br /> 
         <h1><?php echo $collectionTitle; ?></h1>      
 
         <div class="filterable">
@@ -21,35 +22,36 @@ if ($collectionTitle == '') {
                 <li><a href="#" data-filter="not-started">Not Started</a></li>
               </ul><!--END UL-->
         </div><!--END FILTERABLE--> 
+    
+    </div><!--END SECTION TITLE-->
     <div class="progress entire-collection">
-	</div>
-	<div class="transcribe-progress"></div>
-</div><!--END SECTION TITLE-->
-
+    </div>
+    <div class="transcribe-progress"></div>
 
 <div class="portfolio-grid">
     <ul id="thumbs">
         <?php if (metadata('collection', 'total_items') > 0): ?>
-		<?php $totalFiles = 0; //Will hold number of files in collection
-		$fileProgress = 0; //Will hold of files completed
-		$total_needs_review = 0; //Will hold total percent of files that are under review
-		$total_percent_completed = 0; //Will hold  percent of files that are completed
-		?>
+            <?php $totalFiles = 0; //Will hold number of files in collection
+           $fileProgress = 0; //Will hold of files completed
+          $total_needs_review = 0; //Will hold total percent of files that are under review
+          $total_percent_completed = 0; //Will hold  percent of files that are completed
+          ?>
+
             <?php foreach (loop('items') as $item): ?>
                 <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
                     <li class="not-started">
                         <div class="item">
                             <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-                            <div class="progress">
-                                <div class="bar" style="width: <?php 
-									//get relevant progress metadata from item
-                                    $percentNeedsReview = metadata ('item', array('Scriptus', 'Percent Needs Review'));
-                                    $percentCompleted = metadata ('item', array('Scriptus', 'Percent Completed'));
-									//use totalPercent for progress bar of an item
-                                    $totalPercent = $percentNeedsReview + $percentCompleted;
-                                    echo $totalPercent;
-                                    ?>%;">
-                                     <!--TODO: fix this<span class="sr-only">0% Complete </span>-->
+                            <?php 
+                                
+                                $percentNeedsReview = metadata ('item', array('Scriptus', 'Percent Needs Review'));
+                                $percentCompleted = metadata ('item', array('Scriptus', 'Percent Completed'));
+                                $totalPercent = $percentNeedsReview + $percentCompleted;
+                                if ($totalPercent > 100) $totalPercent = 100;
+                            ?>
+                            <div class="progress progress-danger">
+                                <div class="bar" style="width: <?php echo $totalPercent;?>%;">
+                                     <?php echo $totalPercent; ?>%
                                 </div>
                             </div>
                             <div class="item-info">
@@ -62,62 +64,63 @@ if ($collectionTitle == '') {
                                 </div>                  
                             </div><!--END ITEM-INFO-OVERLAY-->
                         </div><!--END ITEM-->                   
-                    </li>  
-			<?php $files = $item->getFiles();
-			
-				  //Again, this is tracking total files
-				  $totalFiles += count($files);
-				  //We don't want to mess up the percentages if needs review or completed are zero
-				  if ($percentNeedsReview != 0){	
-					$total_needs_review += round(count($files) * ($percentNeedsReview / 100));
-				  }
-				  if ($percentCompleted != 0){	
-					$total_percent_completed += round(count($files) * ($percentCompleted / 100));
-				  }
-				  if (($files != 0) && ($totalPercent != 0)){
-					$fileProgress += round(count($files) * ($totalPercent / 100)); 
-				  }
-				?>
-            <?php endforeach; ?>  
-			<?php $total_percentage = $fileProgress / $totalFiles * 100;
-				  $total_needs_review_percentage = round($total_needs_review / $totalFiles * 100);
-				  $total_percent_completed = round($total_percent_completed / $totalFiles * 100); 
-				  ?>
-        <?php endif; ?> 
-
-		
+                    </li>
+                    <?php $files = $item->getFiles();
+            
+                      //Again, this is tracking total files
+                      $totalFiles += count($files);
+                      //We don't want to mess up the percentages if needs review or completed are zero
+                      if ($percentNeedsReview != 0){    
+                        $total_needs_review += round(count($files) * ($percentNeedsReview / 100));
+                      }
+                      if ($percentCompleted != 0){  
+                        $total_percent_completed += round(count($files) * ($percentCompleted / 100));
+                      }
+                      if (($files != 0) && ($totalPercent != 0)){
+                        $fileProgress += round(count($files) * ($totalPercent / 100)); 
+                      }
+                    ?>                                       
+            <?php endforeach; ?> 
+            <?php $total_percentage = $fileProgress / $totalFiles * 100;
+                  $total_needs_review_percentage = round($total_needs_review / $totalFiles * 100);
+                  $total_percent_completed = round($total_percent_completed / $totalFiles * 100); 
+                  ?>           
+        <?php endif; ?>        
     </ul><!--END THUMBS-->
 </div><!-- end PORTFOLIO-GRID -->
 
-<script>
-		totalPercent = '<?php echo $total_percentage ;?>';
-		fileProgress = '<?php echo $fileProgress ;?>';
-		fileProgress = Math.round(fileProgress);
-		totalFiles = '<?php echo $totalFiles ;?>';
-		percentCompleted = <?php echo $total_percent_completed ;?>;
-		percentNeedsReview = <?php echo $total_needs_review_percentage ;?>;
-		
-		
-		/*Debugging */
-		/*
-		console.log("PERCENT IS");
-		console.log(totalPercent);
-		console.log("FILE PROGRESS IS");
-		console.log(fileProgress);
-		console.log("TOTAL FILES IS");
-		console.log(totalFiles);
-		console.log("PERCENT COMPLETED IS");
-		console.log(percentCompleted);
-		console.log("PERCENT NEEDS REVIEW");
-		console.log(percentNeedsReview);*/
-		
-		progressBar = '<div title="' + totalPercent + '% Completed" class="bar" style="width:' + totalPercent + '%;"></div>'; 
-		statusText = '<div><p><strong>' + fileProgress + ' </strong>of<strong> ' + totalFiles + ' </strong>pages have been transcribed!</p></div>';
-		
-		jQuery( ".entire-collection" ).append( progressBar );
-		jQuery( ".transcribe-progress" ).append( statusText );
+<?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
 
+<script>
+        totalPercent = '<?php echo $total_percentage ;?>';
+        totalPercentRounded = Math.round(totalPercent);
+        fileProgress = '<?php echo $fileProgress ;?>';
+        fileProgress = Math.round(fileProgress);
+        totalFiles = '<?php echo $totalFiles ;?>';
+        percentCompleted = <?php echo $total_percent_completed ;?>;
+        percentNeedsReview = <?php echo $total_needs_review_percentage ;?>;
+        
+        
+        /*Debugging */
+        /*
+        console.log("PERCENT IS");
+        console.log(totalPercent);
+        console.log("FILE PROGRESS IS");
+        console.log(fileProgress);
+        console.log("TOTAL FILES IS");
+        console.log(totalFiles);
+        console.log("PERCENT COMPLETED IS");
+        console.log(percentCompleted);
+        console.log("PERCENT NEEDS REVIEW");
+        console.log(percentNeedsReview);*/
+        
+        progressBar = '<div class="progress progress-danger"><div title="' + totalPercent + '% Completed" class="bar" style="width:' + totalPercent + '%;">' + totalPercentRounded + '%</div></div>'; 
+        statusText = '<div><p><strong>' + fileProgress + ' </strong>of<strong> ' + totalFiles + ' </strong>pages have been transcribed!</p></div>';
+        
+        jQuery( ".entire-collection" ).append( progressBar );
+        jQuery( ".transcribe-progress" ).append( statusText );
 </script>
+
 <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
 
 </div><!--END CONTENT-->    
