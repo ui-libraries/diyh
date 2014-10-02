@@ -84,6 +84,14 @@
                         </ul>       
                     </li>
                     <li><a href="<?php echo WEB_ROOT;?>/contact">Contact</a></li>
+                    <?php if (!current_user()) {
+                        echo '<li><a href="' . WEB_ROOT . '/guest-user/user/login">Login</a>';
+                    }
+                    else {
+                        $output = "<li><a href='" . WEB_ROOT . "/guest-user/user/me'>Welcome, " . current_user()->username . "</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
+                        echo $output; 
+                    }
+                    ?>
 
                 </ul><!--END UL MENU-->
                    
