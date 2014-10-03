@@ -8,9 +8,6 @@
     <?php endif; ?>
 
 
-    <?php /*IMPORTANT: This line is necessary for GuestUserPlugin and any other plugins to look and work as they should on the front-end*/
-    fire_plugin_hook('public_head', array('view'=>$this)); ?>
-
     <!-- Stylesheets -->
     <?php
     
