@@ -1341,5 +1341,16 @@ h1 {
     right:0;
 }
 
+p#login-links {
+	margin-left: 32px;
+}
 
+#login-form {
+	margin-left: 32px;
+}
 
+#login-form #submit {
+	border-color: black;
+	color: black;
+	margin-top: 20px;
+}
