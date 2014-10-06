@@ -1341,12 +1341,11 @@ h1 {
     right:0;
 }
 
-p#login-links {
-	margin-left: 32px;
-}
 
-#login-form {
-	margin-left: 32px;
+
+.login #wrapper {
+	margin-left: 35px;
+	margin-top: 65px;
 }
 
 #login-form #submit {
