@@ -293,9 +293,9 @@ a:hover {
 	width: 100%;
 }
 .content {
-	margin: 0 2%;
+	/*margin: 0 2%;
 	padding: 25px 0 0 0;
-	border-top: 1px solid #eee;
+	border-top: 1px solid #eee;*/
 }
 #wrapper img, #wrapper iframe {
 	max-width:100%;
@@ -465,7 +465,7 @@ a:hover {
 ---------------------------------------------------*/
 .section-title {
 	overflow: hidden;
-	margin: 30px 0 30px 0;
+	margin: 0px 0 30px 0;
 	padding: 0;
 }
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
@@ -1352,4 +1352,16 @@ h1 {
 	border-color: black;
 	color: black;
 	margin-top: 20px;
+}
+
+#headerOffset {
+	height:60px;
+}
+
+#wrapper {
+	margin-left: 30px;
+}
+
+#admin-bar {
+	visibility: hidden;
 }
