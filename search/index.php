@@ -2,12 +2,18 @@
 $pageTitle = __('Search Omeka ') . __('(%s total)', $total_results);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
 ?>
-<br /><br /><br /><h1> Search Results </h1>
+<br /><br /><br /><br /><h1> Search Results </h1>
 <?php echo search_form(array('show_advanced' => true)); ?> 
 <?php if ($total_results): ?>
 <?php echo pagination_links(); ?>
 
 <script>$("#searchbox").remove();</script>
+<script type="text/javascript">
+    jQuery(document).ready(function(){
+        Omeka.showAdvancedForm();
+               Omeka.dropDown();
+    });
+</script>
 <table id="search-results" class="table table-striped">
     <thead>
         <tr>
