@@ -8,7 +8,7 @@
     <?php endif; ?>
 
 
-       <?php /*IMPORTANT: This line is necessary for GuestUserPlugin and any other plugins to look and work as they should on the front-end*/
+    <?php /*IMPORTANT: This line is necessary for GuestUserPlugin and any other plugins to look and work as they should on the front-end*/
     fire_plugin_hook('public_head', array('view'=>$this)); ?>
 
     <!-- Stylesheets -->
@@ -63,7 +63,7 @@
 
         <div class="header">    
             
-            <div id="logo"> ,
+            <div id="logo">
                 <a href="<?php echo WEB_ROOT; ?>"><img src="<?php echo img('logo.png'); ?>" alt="" /></a>   
             </div><!--END LOGO-->
             
@@ -111,6 +111,6 @@
 
     </div><!--END HEADER-WRAPPER-->
 
-    <div id="headerOffset"></div>
+   
 
     <!-- END HEADER --> 

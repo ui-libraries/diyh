@@ -12,7 +12,7 @@ if ($collectionTitle == '') {
 <div class="content">
 
 <div class="section-title">    
-        <br /> 
+        <br /> <br /> <br /> <br /> 
         <h1><?php echo $collectionTitle; ?></h1>      
 
         <div class="filterable">
