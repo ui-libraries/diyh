@@ -12,7 +12,7 @@ if ($collectionTitle == '') {
 <div class="content">
 
 <div class="section-title">    
-        <br /> <br /> <br /> <br /> 
+        <br /> <br><br>
         <h1><?php echo $collectionTitle; ?></h1>      
 
         <div class="filterable">
@@ -42,32 +42,34 @@ if ($collectionTitle == '') {
           ?>
 
             <?php $correctOrder = array( ); 
-            $iter = 0; ?>
-
+            $iter = 0; 
+            //track iterations ?>
 
             <?php foreach (loop('items') as $item): ?>
                 <?php
-                //Establish correct order for items.  It is difficult to return them in sorted error given that their values are treated as strings instead of numbers by Omeka, so we are sorting them in the view.  
+                //Establish correct order for items.  It is somewhat complicated to return items in sorted error given that their values are treated as strings instead of numbers by Omeka, so we are sorting them in the view.  We don't sort the array directly because the items themselves don't contain information about Percent Completed and Percent Needs Review.  We have to retrieve that information to sort on it.  
                 $percentCompleted = metadata($item, array('Scriptus', 'Percent Completed'));
                 $percentNeedsReview = metadata($item, array('Scriptus', 'Percent Needs Review'));
                 //Compatibility with old versions (where needs review existed) requires this step
                 $total = $percentCompleted + $percentNeedsReview;                 
                 $correctOrder[$iter] = $total;  
-                $iter++;  
+                $iter++; 
+                //No sorting has occurred yet (see below). 
                 ?>
             <?php endforeach ?>
             <?php 
             //$correctOrder consists of keys that are the item's order in the $items array, and values that are progress.
-            //We sort the array by progress, then use array_keys to get an array with key, value pairs of (original order, sorted order).  We can then set the current item as the next item in sorted order as we iterate through the items.  
+            //We sort $correctOrder by progress, then use array_keys to get an array ($referenceOrder) with key, value pairs of (original order => sorted order).  We can then use $referenceOrder to iterate through items in sorted order.  
             asort($correctOrder);
             $referenceOrder = array_keys($correctOrder);
-            $iter = 0; ?>
+            $iter = 0; //reset tracking of iterations
+            ?>
 
-            <?php foreach (loop('items') as $item): ?>
+            <?php while ($iter < count($items)): ?>
                 
                 <?php 
                 
-
+                //Set current item according to sorted order
                 set_current_record('item', $items[$referenceOrder[$iter]]);
                 ?>
                 
@@ -119,7 +121,7 @@ if ($collectionTitle == '') {
                       }
                     ?> 
             <?php $iter++; ?>                                      
-            <?php endforeach; ?> 
+            <?php endwhile; ?> 
             <?php $total_percentage = $fileProgress / $totalFiles * 100;
                   $total_needs_review_percentage = round($total_needs_review / $totalFiles * 100);
                   $total_percent_completed = round($total_percent_completed / $totalFiles * 100); 

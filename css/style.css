@@ -260,7 +260,6 @@ a:hover {
 .error {
 	background-color: #333;
 	overflow: hidden;
-	margin-bottom: -100px;
 	width:100%;
 }
 .error .left, .error .right {
