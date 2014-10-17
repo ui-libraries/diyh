@@ -12,7 +12,7 @@ if ($collectionTitle == '') {
 <div class="content">
 
 <div class="section-title">    
-        <br /> <br><br>
+        <br /> <br /> <br /> <br /> 
         <h1><?php echo $collectionTitle; ?></h1>      
 
         <div class="filterable">
@@ -35,60 +35,20 @@ if ($collectionTitle == '') {
            $fileProgress = 0; //Will hold of files completed
           $total_needs_review = 0; //Will hold total percent of files that are under review
           $total_percent_completed = 0; //Will hold  percent of files that are completed
-          $iter = 0; //TODO: Remove
-        //$records = get_records('Item');
-        
-
           ?>
 
-            <?php $correctOrder = array( ); 
-            $iter = 0; 
-            //track iterations ?>
-
             <?php foreach (loop('items') as $item): ?>
-                <?php
-                //Establish correct order for items.  It is somewhat complicated to return items in sorted error given that their values are treated as strings instead of numbers by Omeka, so we are sorting them in the view.  We don't sort the array directly because the items themselves don't contain information about Percent Completed and Percent Needs Review.  We have to retrieve that information to sort on it.  
-                $percentCompleted = metadata($item, array('Scriptus', 'Percent Completed'));
-                $percentNeedsReview = metadata($item, array('Scriptus', 'Percent Needs Review'));
-                //Compatibility with old versions (where needs review existed) requires this step
-                $total = $percentCompleted + $percentNeedsReview;                 
-                $correctOrder[$iter] = $total;  
-                $iter++; 
-                //No sorting has occurred yet (see below). 
-                ?>
-            <?php endforeach ?>
-            <?php 
-            //$correctOrder consists of keys that are the item's order in the $items array, and values that are progress.
-            //We sort $correctOrder by progress, then use array_keys to get an array ($referenceOrder) with key, value pairs of (original order => sorted order).  We can then use $referenceOrder to iterate through items in sorted order.  
-            asort($correctOrder);
-            $referenceOrder = array_keys($correctOrder);
-            $iter = 0; //reset tracking of iterations
-            ?>
-
-            <?php while ($iter < count($items)): ?>
-                
-                <?php 
-                
-                //Set current item according to sorted order
-                set_current_record('item', $items[$referenceOrder[$iter]]);
-                ?>
-                
                 <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
-                <?php         
-                    $percentNeedsReview = metadata ('item', array('Scriptus', 'Percent Needs Review'));
-                    $percentCompleted = metadata ('item', array('Scriptus', 'Percent Completed'));
-                    $totalPercent = $percentNeedsReview + $percentCompleted;
-                    if ($totalPercent > 100) $totalPercent = 100;
-                ?>
-                <?php if ($totalPercent > 0): ?>
-                    <li class="started">
-                <?php else: ?>
                     <li class="not-started">
-                <?php endif ?>
-
                         <div class="item">
                             <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
-                            
+                            <?php 
+                                
+                                $percentNeedsReview = metadata ('item', array('Scriptus', 'Percent Needs Review'));
+                                $percentCompleted = metadata ('item', array('Scriptus', 'Percent Completed'));
+                                $totalPercent = $percentNeedsReview + $percentCompleted;
+                                if ($totalPercent > 100) $totalPercent = 100;
+                            ?>
                             <div class="progress progress-danger">
                                 <div class="bar" style="width: <?php echo $totalPercent;?>%;">
                                      <?php echo $totalPercent; ?>%
@@ -119,9 +79,8 @@ if ($collectionTitle == '') {
                       if (($files != 0) && ($totalPercent != 0)){
                         $fileProgress += round(count($files) * ($totalPercent / 100)); 
                       }
-                    ?> 
-            <?php $iter++; ?>                                      
-            <?php endwhile; ?> 
+                    ?>                                       
+            <?php endforeach; ?> 
             <?php $total_percentage = $fileProgress / $totalFiles * 100;
                   $total_needs_review_percentage = round($total_needs_review / $totalFiles * 100);
                   $total_percent_completed = round($total_percent_completed / $totalFiles * 100); 
