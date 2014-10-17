@@ -255,12 +255,16 @@ a:hover {
 	padding: 0 0 40px 0;
 }
 /*--------------------------------------------------
-			ERROR 404 PAGE
+			ERROR 404 PAGE!
 ---------------------------------------------------*/
 .error {
-	background-color: #333;
+	background-color: red;
 	overflow: hidden;
-	width:100%;
+	width: 30%;
+	font-size: 14pt;
+	margin: auto;
+	padding: 10px;
+	color: white;
 }
 .error .left, .error .right {
 	float: left;
@@ -1340,5 +1344,7 @@ h1 {
     right:0;
 }
 
-
+#login-links a {
+	font-size: 1.3em;
+}
 
