@@ -4,8 +4,8 @@
     jQuery(function($){             
         $.supersized({              
             // Functionality
-            slideshow               :   1,          // Slideshow on/off
-            autoplay                :   1,          // Slideshow starts playing automatically
+            slideshow               :   0,          // Slideshow on/off
+            autoplay                :   0,          // Slideshow starts playing automatically
             start_slide             :   1,          // Start slide (0 is random)
             stop_loop               :   0,          // Pauses slideshow on last slide
             random                  :   0,          // Randomize slide order (Ignores start slide)
@@ -25,7 +25,7 @@
             horizontal_center       :   1,          // Horizontally center background
             fit_always              :   0,          // Image will never exceed browser width or height (Ignores min. dimensions)
             fit_portrait            :   1,          // Portrait images will not exceed browser height
-            fit_landscape           :   0,          // Landscape images will not exceed browser width
+            fit_landscape           :   1,          // Landscape images will not exceed browser width
                                                                
             // Components                           
             slide_links             :   'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
@@ -46,23 +46,7 @@
 </script>
 
 
-<div id="calltoaction"><a href="http://s-lib018.lib.uiowa.edu/omeka/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>"></a></div>
-<div id="controls-wrapper" class="load-item">
-
-    <div id="controls">
-    
-        <a id="prevslide" class="load-item"></a>
-        <a id="nextslide" class="load-item"></a>        
-
-        <div id="slidecaption"></div>
-
-    </div>
-      
-
-
-    
-</div>
-
+<div id="calltoaction"><a href="<?php echo WEB_ROOT;?>/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>"></a></div>
 
 <div id="slideshow"></div></div>    
 

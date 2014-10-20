@@ -16,34 +16,23 @@
     
     queue_css_file('blog');
     queue_css_file('socialize-bookmarks');
-    queue_css_file('prettyPhoto');
     queue_css_file('supersized');
     queue_css_file('bootstrap.min');
-
-    /*queue_css_file('admin-bar');*/
     queue_css_file('style');
 
+    echo head_css(); ?> 
 
-    echo head_css();
-    ?>
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900italic' rel='stylesheet' type='text/css'>
+    
     <!-- JavaScripts -->
     <?php queue_js_file('vendor/modernizr'); ?>
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
-    <?php queue_js_file('vendor/jquery.1.4.4'); ?>
-    <?php queue_js_file('custom'); ?>
-    <?php queue_js_file('vendor/jquery-1.11.1.min'); ?>
-
+    <?php queue_js_file('vendor/jquery-1.4.4.min'); ?>
     <?php queue_js_file('vendor/bootstrap.min'); ?>
-    <?php queue_js_file('twitter'); ?>
-    <?php queue_js_file('vendor/bra.photostream'); ?>
-    <?php queue_js_file('vendor/prettyPhoto'); ?>
-    <?php queue_js_file('vendor/jquery.easing.min'); ?>
     <?php queue_js_file('vendor/supersized.3.2.7.min'); ?>
-    <?php queue_js_file('vendor/supersized.shutter.min'); ?>
     <?php queue_js_file('vendor/filter-fade-portfolio'); ?>
+    <?php queue_js_file('custom'); ?>
 
-    <?php queue_js_file('globals'); ?>
     <?php echo head_js(); ?>
 
     
