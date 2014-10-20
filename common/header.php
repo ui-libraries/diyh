@@ -24,7 +24,6 @@
 
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900italic' rel='stylesheet' type='text/css'>
     
-    <!-- JavaScripts -->
     <?php queue_js_file('vendor/modernizr'); ?>
     <?php queue_js_file('vendor/selectivizr', 'javascripts', array('conditional' => '(gte IE 6)&(lte IE 8)')); ?>
     <?php queue_js_file('vendor/jquery-1.4.4.min'); ?>
@@ -32,6 +31,7 @@
     <?php queue_js_file('vendor/supersized.3.2.7.min'); ?>
     <?php queue_js_file('vendor/filter-fade-portfolio'); ?>
     <?php queue_js_file('custom'); ?>
+    <?php queue_js_file('vendor/jquery-1.11.1.min'); ?>
 
     <?php echo head_js(); ?>
 
