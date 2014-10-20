@@ -12,7 +12,7 @@ if ($itemTitle == '') {
 <div class="content">
 
 <div class="section-title">     
-        <br /><br /><br /><br />
+
         <h1><?php echo $itemTitle; ?></h1>      
 
         <div class="filterable">
