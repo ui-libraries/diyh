@@ -1370,3 +1370,11 @@ h1 {
 #admin-bar {
 	visibility: hidden;
 }
+
+img {
+  max-width: none;
+}
+
+#wrapper img, #wrapper iframe {
+	max-width: none;
+}
