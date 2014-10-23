@@ -368,6 +368,7 @@ a:hover {
 #primary-menu {
 	float: left;
 	margin: 17px 0 0 55px;
+	padding-top: 15px;
 }
 #primary-menu select {
 	display:none;
@@ -468,7 +469,7 @@ a:hover {
 ---------------------------------------------------*/
 .section-title {
 	overflow: hidden;
-	margin: 100px 0 30px 0;
+	margin: 120px 0 30px 0;
 	padding: 0;
 }
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
@@ -1336,6 +1337,14 @@ h1 {
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
 }
 
+#entire-collection {
+	width: 25%;
+}
+
+#item-progress-bar {
+	margin-top: 5px;
+}
+
 #calltoaction {
 
     position: relative;
@@ -1357,10 +1366,6 @@ h1 {
 	border-color: black;
 	color: black;
 	margin-top: 20px;
-}
-
-#headerOffset {
-	height:60px;
 }
 
 #wrapper {

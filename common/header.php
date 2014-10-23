@@ -63,6 +63,8 @@
                     <li><a href="#">Collections</a>       
                         <ul>                            
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/12">Pioneer Lives</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/13">World War II Diaries and Letters</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/collections/show/15">World War I Diaries and Letters</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/9">Iowa Women’s Lives: Letters and Diaries</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/7">Szathmary Culinary Manuscripts and Cookbooks</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/11">Building the Transcontinental Railroad</a></li>
@@ -76,7 +78,7 @@
                         echo '<li><a href="' . WEB_ROOT . '/guest-user/user/login">Login</a>';
                     }
                     else {
-                        $output = "<li><a href='" . WEB_ROOT . "/guest-user/user/me'>Welcome, " . current_user()->username . "</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
+                        $output = "<li><a href='" . WEB_ROOT . "/recent-comments'>" . current_user()->username . "'s dashboard</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
                         echo $output; 
                     }
                     ?>

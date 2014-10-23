@@ -23,10 +23,8 @@ if ($collectionTitle == '') {
               </ul><!--END UL-->
         </div><!--END FILTERABLE--> 
     
-    </div><!--END SECTION TITLE-->
-    <div class="progress entire-collection">
-    </div>
-    <div class="transcribe-progress"></div>
+    </div><!--END SECTION TITLE-->   
+    
 
 <div class="portfolio-grid">
     <ul id="thumbs">
@@ -49,7 +47,7 @@ if ($collectionTitle == '') {
                                 $totalPercent = $percentNeedsReview + $percentCompleted;
                                 if ($totalPercent > 100) $totalPercent = 100;
                             ?>
-                            <div class="progress progress-danger">
+                            <div id="item-progress-bar" class="progress progress-danger">
                                 <div class="bar" style="width: <?php echo $totalPercent;?>%;">
                                      <?php echo $totalPercent; ?>%
                                 </div>
@@ -114,11 +112,12 @@ if ($collectionTitle == '') {
         console.log("PERCENT NEEDS REVIEW");
         console.log(percentNeedsReview);*/
         
-        progressBar = '<div class="progress progress-danger"><div title="' + totalPercent + '% Completed" class="bar" style="width:' + totalPercent + '%;">' + totalPercentRounded + '%</div></div>'; 
+        progressBar = '<div id = "entire-collection" class="progress progress-danger"><div title="' + totalPercent + '% Completed" class="bar" style="width:' + totalPercent + '%;">' + totalPercentRounded + '%</div></div>'; 
         statusText = '<div><p><strong>' + fileProgress + ' </strong>of<strong> ' + totalFiles + ' </strong>pages have been transcribed!</p></div>';
         
-        jQuery( ".entire-collection" ).append( progressBar );
-        jQuery( ".transcribe-progress" ).append( statusText );
+        
+        jQuery( ".section-title" ).append( statusText );
+        jQuery( ".section-title" ).append( progressBar );
 </script>
 
 <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
