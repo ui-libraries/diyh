@@ -260,7 +260,7 @@ a:hover {
 .error {
 	background-color: red;
 	overflow: hidden;
-	width: 30%;
+	max-width: 330px;
 	font-size: 14pt;
 	margin: auto;
 	padding: 10px;
@@ -1340,6 +1340,7 @@ h1 {
 
 #entire-collection {
 	width: 25%;
+	margin-bottom: 10px;
 }
 
 #item-progress-bar {
@@ -1391,7 +1392,7 @@ img {
 	border-color: #C6A971;
 	border-width: 1px;
 	border-style: solid;
-	width: 90px;
+	width: 75px;
 	margin-bottom: 10px;
 	text-align: center;
 	position: absolute;
@@ -1400,8 +1401,8 @@ img {
 }
 
 .itemComplete {
-	width: 65px;
-	left: 123px;
+	width: 85px;
+	left: 103px;
 }
 
 .item .progress {

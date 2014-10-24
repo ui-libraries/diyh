@@ -74,9 +74,9 @@ if ($collectionTitle == '') {
                             </div>
                             <div class="item-info">
                                 <?php if ($totalPercent == 100): ?>
-                                  <div class="itemProgress itemComplete"><strong>Completed</strong></div>
+                                  <div class="itemProgress itemComplete"><strong>Needs Review</strong></div>
                                 <?php else: ?>
-                                 <div class="itemProgress"><strong><?php echo $totalPercent; ?>% complete</strong></div>
+                                 <div class="itemProgress"><strong><?php echo $totalPercent; ?>% started</strong></div>
                                 <?php endif; ?>
                                  <h3 class="title"><?php echo link_to_item(snippet($itemTitle, 0, 100)); ?></h3>
                             </div><!--END ITEM-INFO-->  
@@ -134,12 +134,12 @@ if ($collectionTitle == '') {
         console.log("PERCENT NEEDS REVIEW");
         console.log(percentNeedsReview);*/
         
-        progressBar = '<div id = "entire-collection" class="progress progress-danger"><div title="' + totalPercent + '% Completed" class="bar" style="width:' + totalPercent + '%;">' + totalPercentRounded + '%</div></div>'; 
+        progressBar = '<div id = "entire-collection" class="progress progress-danger"><div title="' + totalPercent + '% Completed" class="bar" style="width:' + totalPercent + '%;"></div></div>'; 
         statusText = '<div><p><strong>' + fileProgress + ' </strong>of<strong> ' + totalFiles + ' </strong>pages have been transcribed!</p></div>';
-        
-        
-        jQuery( ".section-title" ).append( statusText );
+
         jQuery( ".section-title" ).append( progressBar );
+        jQuery( ".section-title" ).append( statusText );
+
 </script>
 
 <?php fire_plugin_hook('public_collections_show', array('view' => $this, 'collection' => $collection)); ?>
