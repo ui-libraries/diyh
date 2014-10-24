@@ -1326,6 +1326,7 @@ h1 {
   background-image: linear-gradient(to bottom, #9c1410, #c43c35);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffc43c35', GradientType=0);
+  
 }
 
 .progress-danger.progress-striped .bar,
@@ -1336,15 +1337,16 @@ h1 {
   background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
   background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+
+}
+
+.item-progress {
+	margin-top: 10px;
 }
 
 #entire-collection {
 	width: 25%;
 	margin-bottom: 10px;
-	margin-top: 5px;
-}
-
-#item-progress-bar {
 	margin-top: 5px;
 }
 
@@ -1393,12 +1395,12 @@ img {
 	border-color: #C6A971;
 	border-width: 1px;
 	border-style: solid;
-	width: 75px;
+	width: 85px;
 	margin-bottom: 10px;
 	text-align: center;
 	position: absolute;
 	left: 0px;
-	top: 225px;
+	top: 235px;
 }
 
 .itemComplete {

@@ -68,7 +68,7 @@ if ($collectionTitle == '') {
                                 $totalPercent = $percentNeedsReview + $percentCompleted;
                                 if ($totalPercent > 100) $totalPercent = 100;
                             ?>
-                            <div class="progress progress-danger">
+                            <div class="progress progress-danger item-progress">
                                 <div class="bar" style="width: <?php echo $totalPercent;?>%;">
                                 </div>
                             </div>
