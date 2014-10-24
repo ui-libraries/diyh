@@ -29,13 +29,34 @@ if ($collectionTitle == '') {
 <div class="portfolio-grid">
     <ul id="thumbs">
         <?php if (metadata('collection', 'total_items') > 0): ?>
-            <?php $totalFiles = 0; //Will hold number of files in collection
-           $fileProgress = 0; //Will hold of files completed
-          $total_needs_review = 0; //Will hold total percent of files that are under review
-          $total_percent_completed = 0; //Will hold  percent of files that are completed
+          <?php $totalFiles = 0; //Will hold number of files in collection
+            $fileProgress = 0; //Will hold of files completed
+            $total_needs_review = 0; //Will hold total percent of files that are under review
+            $total_percent_completed = 0; //Will hold  percent of files that are completed
+            $correctOrder = array( ); 
+            $iter = 0;
           ?>
+           <?php foreach (loop('items') as $item): ?>
+              <?php
+              //Establish correct order for items.  It is difficult to return them in sorted error given that their values are treated as strings instead of numbers by Omeka, so we are sorting them in the view.  
+              $percentCompleted = metadata($item, array('Scriptus', 'Percent Completed'));
+              $percentNeedsReview = metadata($item, array('Scriptus', 'Percent Needs Review'));
+              //Compatibility with old versions (where needs review existed) requires this step
+              $total = $percentCompleted + $percentNeedsReview;                 
+              $correctOrder[$iter] = $total;  
+              $iter++;  
+              ?>
+            <?php endforeach ?>
+            <?php 
+            //$correctOrder consists of keys that are the item's order in the $items array, and values that are progress.
+            //We sort the array by progress, then use array_keys to get an array with key, value pairs of (original order, sorted order).  We can then set the current item as the next item in sorted order as we iterate through the items.  
+            asort($correctOrder);
+            $referenceOrder = array_keys($correctOrder);
+            $iter = 0; ?>
 
             <?php foreach (loop('items') as $item): ?>
+
+                <?php set_current_record('item', $items[$referenceOrder[$iter]]); ?>
                 <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
                     <li class="not-started">
                         <div class="item">
@@ -81,7 +102,8 @@ if ($collectionTitle == '') {
                       if (($files != 0) && ($totalPercent != 0)){
                         $fileProgress += round(count($files) * ($totalPercent / 100)); 
                       }
-                    ?>                                       
+                    ?>    
+            <?php $iter++; ?>                                    
             <?php endforeach; ?> 
             <?php $total_percentage = $fileProgress / $totalFiles * 100;
                   $total_needs_review_percentage = round($total_needs_review / $totalFiles * 100);

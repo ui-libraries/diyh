@@ -1392,6 +1392,7 @@ img {
 	border-style: solid;
 	width: 90px;
 	margin-bottom: 10px;
+	text-align: center;
 }
 
 .itemComplete {
