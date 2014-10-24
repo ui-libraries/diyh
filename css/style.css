@@ -1012,8 +1012,8 @@ ul.tabs li a:hover, ul.tabs li.active a {
 .item-info {
 	padding: 5px 15px 20px 10px; /*modified by mb to make title fit in box */
 	float: left;
-	height: 60px; /*modified by mb to make title fit in box */
-	max-height: 60px;
+	height: 125px; /*modified by mb to make title fit in box */
+	max-height: 125px;
 }
 .item-info h3 {
 	font-weight: normal;
@@ -1382,4 +1382,22 @@ img {
 
 #wrapper img, #wrapper iframe {
 	max-width: none;
+}
+
+.itemProgress {
+	padding: 5px;
+	background-color: #FFFFED;
+	border-color: #C6A971;
+	border-width: 1px;
+	border-style: solid;
+	width: 90px;
+	margin-bottom: 10px;
+}
+
+.itemComplete {
+	width: 65px;
+}
+
+.item .progress {
+	margin-bottom: 5px;
 }

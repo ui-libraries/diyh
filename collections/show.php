@@ -49,11 +49,15 @@ if ($collectionTitle == '') {
                             ?>
                             <div id="item-progress-bar" class="progress progress-danger">
                                 <div class="bar" style="width: <?php echo $totalPercent;?>%;">
-                                     <?php echo $totalPercent; ?>%
                                 </div>
                             </div>
                             <div class="item-info">
-                                <h3 class="title"><a href="#"><?php echo link_to_item($itemTitle); ?></a></h3>
+                                <?php if ($totalPercent == 100): ?>
+                                  <div class="itemProgress itemComplete"><strong>Completed</strong></div>
+                                <?php else: ?>
+                                  <div class="itemProgress"><strong><?php echo $totalPercent; ?>% complete</strong></div>
+                                <?php endif; ?>
+                                 <h3 class="title"><a href="#"><?php echo link_to_item(snippet($itemTitle, 0, 100)); ?></a></h3>
                             </div><!--END ITEM-INFO-->  
                             <!-- <div class="item-info-overlay">
                                 <div>                                    
