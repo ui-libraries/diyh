@@ -7,6 +7,8 @@
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
 
+    <title>DIY History</title>
+
 
     <?php /*IMPORTANT: This line is necessary for GuestUserPlugin and any other plugins to look and work as they should on the front-end*/
     fire_plugin_hook('public_head', array('view'=>$this)); ?>

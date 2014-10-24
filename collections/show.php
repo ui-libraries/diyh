@@ -68,7 +68,7 @@ if ($collectionTitle == '') {
                                 $totalPercent = $percentNeedsReview + $percentCompleted;
                                 if ($totalPercent > 100) $totalPercent = 100;
                             ?>
-                            <div id="item-progress-bar" class="progress progress-danger">
+                            <div class="progress progress-danger">
                                 <div class="bar" style="width: <?php echo $totalPercent;?>%;">
                                 </div>
                             </div>
@@ -78,14 +78,10 @@ if ($collectionTitle == '') {
                                 <?php else: ?>
                                  <div class="itemProgress"><strong><?php echo $totalPercent; ?>% complete</strong></div>
                                 <?php endif; ?>
-                                 <h3 class="title"><a href="#"><?php echo link_to_item(snippet($itemTitle, 0, 100)); ?></a></h3>
+                                 <h3 class="title"><?php echo link_to_item(snippet($itemTitle, 0, 100)); ?></h3>
                             </div><!--END ITEM-INFO-->  
-                            <!-- <div class="item-info-overlay">
-                                <div>                                    
-                                    <p>Progress bar or maybe a little description</p>
-                                    <?php //echo link_to_item($itemTitle, array('class'=>'view')); ?>                                                       
-                                </div>                  
-                            </div><!--END ITEM-INFO-OVERLAY-->
+                                             
+                            
                         </div><!--END ITEM-->                   
                     </li>
                     <?php $files = $item->getFiles();
@@ -151,6 +147,7 @@ if ($collectionTitle == '') {
 </div><!--END CONTENT-->    
     
 </div><!--END PRIMARY-->
+</div>
 
 
 

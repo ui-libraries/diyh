@@ -46,7 +46,7 @@
 </script>
 
 
-<div id="calltoaction"><a href="<?php echo WEB_ROOT;?>/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>"></a></div>
+<div id="calltoaction"><a href="<?php echo WEB_ROOT;?>/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>" alt="try now"></a></div>
 
 <div id="slideshow"></div></div>    
 

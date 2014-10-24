@@ -61,11 +61,7 @@ if ($itemTitle == '') {
                                     } ?>
                                 
                             </div><!--END ITEM-INFO-->  
-                            <!-- <div class="item-info-overlay">
-                                <div>                                    
-                                    <p>Add info on other side?<p>                                                      
-                                </div>                  
-                            </div><!--END ITEM-INFO-OVERLAY-->
+                            
                         </div><!--END ITEM-->                   
                     </li>                       
             <?php endforeach; ?>       
