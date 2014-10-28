@@ -35,7 +35,6 @@
     <?php queue_js_file('vendor/filter-fade-portfolio'); ?>
 
     <?php echo head_js(); ?>
-
     
 </head>
 

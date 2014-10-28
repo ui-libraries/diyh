@@ -57,7 +57,8 @@ if ($collectionTitle == '') {
             <?php foreach (loop('items') as $item): ?>
 
                 <?php set_current_record('item', $items[$referenceOrder[$iter]]); ?>
-                <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title'))); ?>
+                <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title')));
+              ?>
                     <li class="not-started">
                         <div class="item">
                             <?php echo link_to_item(item_image('square_thumbnail', array('alt' => $itemTitle))); ?>
