@@ -469,7 +469,7 @@ a:hover {
 ---------------------------------------------------*/
 .section-title {
 	overflow: hidden;
-	margin: 120px 0 30px 0;
+	margin: 160px 0 30px 0;
 	padding: 0;
 }
 .section-title h1, .section-title h2, .section-title h3, .section-title h4, .section-title h5, .section-title h6 {
@@ -1006,6 +1006,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 @media screen and (max-width: 1015px) {
 #logo img { width: 300px; }
 #logo { width: 300px; }
+#primary-menu {padding-top: 5px;}
 }
 
 @media screen and (max-width: 920px) {
@@ -1255,6 +1256,12 @@ ul.tabs li a:hover, ul.tabs li.active a {
 }
 
 
+.login #wrapper {
+	margin-left: 35px;
+	margin-top: 65px;
+}
+
+
 /*---------------iPad landscape---------------*/
 @media only screen and (min-width : 768px) and (max-width : 1040px) {
 .google-map { height: 300px; }
@@ -1274,17 +1281,18 @@ ul.tabs li a:hover, ul.tabs li.active a {
 .one, .one-half, .two-third, .one-third, .one-fourth { float:left; position:relative; width: 100%; margin-right: 0; margin-bottom: 25px; }
 .footer .one, .footer .one-half, .footer .one-third, .footer .one-fouth { text-align: center; margin-bottom: 3px; }
 .footer-hidden-content .one, .footer-hidden-content .one-half, .footer-hidden-content .two-third, .footer-hidden-content .one-third, .footer-hidden-content .one-fourth {  margin-bottom: 50px; }
+
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 }
 
 /*---------------iPhone landscape---------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 body { -webkit-text-size-adjust: none; }
-#header-wrapper { position: relative; overflow: hidden; padding-top: 0px;}
+#header-wrapper { position: relative; overflow: hidden;}
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
 .header .social-bookmarks, #back-top a { display:none; }
 #primary-menu select { display:block; width: 100%; }
-#primary-menu { margin: 7px 0 0 0; float: right; }
+#primary-menu { margin: 7px 0 0 50px; float: right; width: 100%;}
 #primary-menu ul { display:none; }
 .google-map { height: 150px; }
 .error .left, .error .right { padding-top: 70px; padding-bottom: 70px; }
@@ -1300,6 +1308,8 @@ body { -webkit-text-size-adjust: none; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 .section-title {margin-top: 5px;}
 #wrapper {margin-left: 0px;}
+.login #wrapper { margin-left: 10px; margin-top: 0px; }
+body.admin-bar {padding-top: 10px;}
 }
 
 /*---------------iPhone portrait---------------*/
@@ -1326,6 +1336,8 @@ blockquote.left, blockquote.right {	width: 100%; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 .section-title {margin-top: 5px;}
 #wrapper {margin-left: 0px;}
+.login #wrapper { margin-left: 0px; margin-top: 0px; }
+body.admin-bar {padding-top: 10px;}
 }
 
 /*--Omeka--*/
@@ -1384,10 +1396,6 @@ h1 {
 	font-size: 1.3em;
 }
 
-.login #wrapper {
-	margin-left: 35px;
-	margin-top: 65px;
-}
 
 #login-form #submit, #contact-form #submit, .admin-bar #submit {
 	border-color: black;
