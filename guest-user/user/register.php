@@ -24,7 +24,8 @@ body {
 
 h1 {
 	width: 50%;
-    margin: 0 auto;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
 form {
@@ -36,13 +37,22 @@ form {
   margin-left: 25% auto;
 }
 
+.social-bookmarks {
+  visibility: hidden;
+  position: absolute;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    margin-top: 20px;
+  }
+}
 
 
 
 </style>
 <script>$("#searchbox").remove();</script>
 
-<br /><br /><br /><br />
 <h1><?php echo $pageTitle; ?></h1>
 <div id='primary'>
 <div id='capabilities'>

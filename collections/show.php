@@ -15,13 +15,7 @@ if ($collectionTitle == '') {
        
         <h1><?php echo $collectionTitle; ?></h1>      
 
-        <div class="filterable">
-            <ul>
-                <li class="active"><a href="#" data-filter="all"> All</a></li>
-                <li><a href="#" data-filter="started">Started</a></li>
-                <li><a href="#" data-filter="not-started">Not Started</a></li>
-              </ul><!--END UL-->
-        </div><!--END FILTERABLE--> 
+        
     
     </div><!--END SECTION TITLE-->   
     

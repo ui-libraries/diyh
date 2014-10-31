@@ -38,10 +38,19 @@ h1 {
     margin: 0 auto;
 }
 
+#wrapper #primary {
+  width: 100%;
+  margin-top: 80px;
+}
 
+@media (max-width: 767px) {
+  #wrapper #primary {
+    margin-top: 0px;
+  }
+}
 
 </style>
-<br /><br /><br /><br />
+
 <div id="primary">
     <h1><?php echo html_escape(get_option('simple_contact_form_contact_page_title')); ?></h1>
 <div id="simple-contact">

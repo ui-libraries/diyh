@@ -1272,7 +1272,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 /*---------------iPad portrait---------------*/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 4%; }
-.header .social-bookmarks { display:none; }
+.header .social-bookmarks {  }
 .google-map { height: 300px; }
 .error .left, .error .right { padding-top: 250px; padding-bottom: 250px; }
 .error h1 { font-size:122px; }
@@ -1290,7 +1290,8 @@ ul.tabs li a:hover, ul.tabs li.active a {
 body { -webkit-text-size-adjust: none; }
 #header-wrapper { position: relative; overflow: hidden;}
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
-.header .social-bookmarks, #back-top a { display:none; }
+.header .social-bookmarks {margin-top: 15px;}
+#back-top a { display:none; }
 #primary-menu select { display:block; width: 100%; }
 #primary-menu { margin: 7px 0 0 50px; float: right; width: 100%;}
 #primary-menu ul { display:none; }
@@ -1316,7 +1317,9 @@ body.admin-bar {padding-top: 10px;}
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 #header-wrapper { position: relative; overflow: hidden; }
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
-.header .social-bookmarks, #back-top a { display:none; }
+#back-top a { display:none; }
+.header .social-bookmarks {margin-top: 15px;}
+#header-wrapper .social-bookmarks a {display:none;}
 #logo, #logo a { margin: 0 0 20px 0; float: none; text-align: center;}
 #primary-menu select { display:block; width: 100%; }
 #primary-menu { margin: 0; width: 100%; }
@@ -1405,8 +1408,7 @@ h1 {
 
 #admin-bar {
 	position: absolute;
-	top: 9999px;
-	left: 9999px;
+	visibility: hidden;
 }
 
 img {
@@ -1441,3 +1443,8 @@ img {
 }
 
 #logo { margin-right: 55px; }
+
+#searchbox #query {
+	margin-right: 5px;
+}
+
