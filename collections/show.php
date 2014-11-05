@@ -50,7 +50,10 @@ if ($collectionTitle == '') {
 
             <?php foreach (loop('items') as $item): ?>
 
-                <?php set_current_record('item', $items[$referenceOrder[$iter]]); ?>
+                <?php set_current_record('item', $items[$referenceOrder[$iter]]); 
+                //I use $item to count the number of an item's files below.  $item is reset to reflect the correct sorted order
+                $item = $items[$referenceOrder[$iter]]; 
+                ?>
                 <?php $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title')));
               ?>
                     <li class="not-started">
@@ -70,6 +73,8 @@ if ($collectionTitle == '') {
                             <div class="item-info">
                                 <?php if ($totalPercent == 100): ?>
                                   <div class="itemProgress itemComplete"><strong>Needs Review</strong></div>
+                                <?php elseif ($totalPercent == 0): ?>
+                                  <div class="itemProgress"><strong>Not Started</strong></div>
                                 <?php else: ?>
                                  <div class="itemProgress"><strong><?php echo $totalPercent; ?>% started</strong></div>
                                 <?php endif; ?>
@@ -90,7 +95,7 @@ if ($collectionTitle == '') {
                       if ($percentCompleted != 0){  
                         $total_percent_completed += round(count($files) * ($percentCompleted / 100));
                       }
-                      if (($files != 0) && ($totalPercent != 0)){
+                      if ((count($files) > 0) && ($totalPercent != 0)){
                         $fileProgress += round(count($files) * ($totalPercent / 100)); 
                       }
                     ?>    

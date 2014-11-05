@@ -59,9 +59,8 @@
             <div id="primary-menu">
                     
                 <ul class="menu">
-              
-                    <li><a href="<?php echo WEB_ROOT;?>/about">About</a></li>                   
-                    <li><a href="#">Collections</a>       
+
+                    <li><a id="collectionMenuItem" href="#">Collections</a>       
                         <ul>                            
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/12">Pioneer Lives</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/13">World War II Diaries and Letters</a></li>
@@ -74,7 +73,6 @@
 
                         </ul>       
                     </li>
-                    <li><a href="<?php echo WEB_ROOT;?>/contact">Contact</a></li>
                     <?php if (!current_user()) {
                         echo '<li><a href="' . WEB_ROOT . '/guest-user/user/login">Login</a>';
                     }
@@ -83,6 +81,14 @@
                         echo $output; 
                     }
                     ?>
+                    <li><a href="<?php echo WEB_ROOT;?>/about">About</a>
+                        <ul>
+                            <li><a href="<?php echo WEB_ROOT;?>/about">About The Project</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/contact">Contact</a></li>
+                            <li><a href="<?php echo WEB_ROOT;?>/tips">Transcription Tips</a></li>
+                        </ul>
+                    </li>                   
+  
 
                 </ul><!--END UL MENU-->
                    

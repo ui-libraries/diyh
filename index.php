@@ -1,5 +1,5 @@
 <?php echo head(array('bodyid'=>'home', 'bodyclass' =>'two-col')); ?>
-
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Italianno" />
 <script type="text/javascript">         
     jQuery(function($){             
         $.supersized({              
@@ -47,7 +47,21 @@
 
 
 <div id="calltoaction"><a href="<?php echo WEB_ROOT;?>/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>" alt="try now"></a></div>
-
+<div id="homeBanner" style="position: absolute;
+font-weight: bold;
+font-family: 'Italianno';
+text-align: center;
+top: 40%;
+left: 25%;
+font-size: 42pt;
+color: white;
+width: 50%;
+height: 5;
+background-color: #B22400;
+opacity: .9;
+padding: 10px;
+line-height: 50px;
+border-radius: 15px;">Pick a collection to transcribe!</div>
 <div id="slideshow"></div></div>    
 
 

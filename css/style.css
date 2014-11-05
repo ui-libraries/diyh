@@ -1309,6 +1309,7 @@ body { -webkit-text-size-adjust: none; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 .section-title {margin-top: 5px;}
 #wrapper {margin-left: 0px;}
+#logo {margin-bottom: 10px;}
 .login #wrapper { margin-left: 10px; margin-top: 0px; }
 body.admin-bar {padding-top: 10px;}
 }
@@ -1320,7 +1321,7 @@ body.admin-bar {padding-top: 10px;}
 #back-top a { display:none; }
 .header .social-bookmarks {margin-top: 15px;}
 #header-wrapper .social-bookmarks a {display:none;}
-#logo, #logo a { margin: 0 0 20px 0; float: none; text-align: center;}
+#logo, #logo a { margin: 0 0 10px 0; float: none; text-align: center;}
 #primary-menu select { display:block; width: 100%; }
 #primary-menu { margin: 0; width: 100%; }
 #primary-menu ul { display:none; }
@@ -1446,5 +1447,12 @@ img {
 
 #searchbox #query {
 	margin-right: 5px;
+}
+#primary-menu #collectionMenuItem { 
+	font-weight: bold;
+	font-size: 1.2em;
+	background-color: #FFFFED;
+	border-radius: 3px;
+	background-clip: content-box;
 }
 
