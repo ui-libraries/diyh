@@ -1448,6 +1448,11 @@ img {
 #searchbox #query {
 	margin-right: 5px;
 }
+
+#searchbox input {
+	border-color: lightgrey;
+	color: black;
+}
 #primary-menu #collectionMenuItem { 
 	font-weight: bold;
 	font-size: 1.2em;
@@ -1456,3 +1461,6 @@ img {
 	background-clip: content-box;
 }
 
+#recent-comments h2, #recent-transcriptions h2 {
+	margin-top: 10px;
+}

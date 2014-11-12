@@ -33,6 +33,20 @@ h1 {
   margin-bottom: 10px;  
 }
 
+#login-links div a {
+    color: black;
+    display: block;
+    padding: 10px;
+}
+
+#login-links div:first-child a:first-child {
+    color: white;
+    display: block;
+    background-color: darkgrey;
+    padding: 10px;
+}
+
+
 
 
 #login-form .form-control:focus {
