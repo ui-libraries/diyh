@@ -77,7 +77,7 @@
                         echo '<li><a href="' . WEB_ROOT . '/guest-user/user/login">Login</a>';
                     }
                     else {
-                        $output = "<li><a href='" . WEB_ROOT . "/recent-comments'>" . current_user()->username . "'s dashboard</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
+                        $output = "<li><a href='" . WEB_ROOT . "/dashboard'>" . "Dashboard</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
                         echo $output; 
                     }
                     ?>

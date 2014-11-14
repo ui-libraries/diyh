@@ -369,6 +369,7 @@ a:hover {
 	float: left;
 	margin: 17px 0 0 0px;
 	padding-top: 15px;
+	padding-right: 15px;
 }
 #primary-menu select {
 	display:none;
@@ -1263,14 +1264,14 @@ ul.tabs li a:hover, ul.tabs li.active a {
 
 
 /*---------------iPad landscape---------------*/
-@media only screen and (min-width : 768px) and (max-width : 1040px) {
+@media only screen and (min-width : 767px) and (max-width : 1040px) {
 .google-map { height: 300px; }
 .error .left, .error .right { padding-top: 120px; padding-bottom: 120px; }
 .error h1 { font-size:122px; }
 }
 
 /*---------------iPad portrait---------------*/
-@media only screen and (min-width: 768px) and (max-width: 959px) {
+@media only screen and (min-width: 767px) and (max-width: 959px) {
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 4%; }
 .header .social-bookmarks {  }
 .google-map { height: 300px; }
@@ -1292,7 +1293,7 @@ body { -webkit-text-size-adjust: none; }
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
 .header .social-bookmarks {margin-top: 15px;}
 #back-top a { display:none; }
-#primary-menu select { display:block; width: 100%; }
+#primary-menu select { display:block; width: 100%; margin-left: 10px;}
 #primary-menu { margin: 7px 0 0 50px; float: right; width: 100%;}
 #primary-menu ul { display:none; }
 .google-map { height: 150px; }
@@ -1309,7 +1310,7 @@ body { -webkit-text-size-adjust: none; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 .section-title {margin-top: 5px;}
 #wrapper {margin-left: 0px;}
-#logo {margin-bottom: 10px;}
+#logo {margin-bottom: 5px;}
 .login #wrapper { margin-left: 10px; margin-top: 0px; }
 body.admin-bar {padding-top: 10px;}
 }
@@ -1383,7 +1384,7 @@ h1 {
 }
 
 #entire-collection {
-	width: 25%;
+	width: 65%;
 	margin-bottom: 10px;
 	margin-top: 5px;
 }
@@ -1443,7 +1444,7 @@ img {
 	margin-bottom: 5px;
 }
 
-#logo { margin-right: 55px; }
+#logo { margin-right: 30px; }
 
 #searchbox #query {
 	margin-right: 5px;
@@ -1463,4 +1464,9 @@ img {
 
 #recent-comments h2, #recent-transcriptions h2 {
 	margin-top: 10px;
+}
+
+.portfolio-grid img, .transcription-item img {
+	height: 200px;
+	width: 200px;
 }
