@@ -2,42 +2,89 @@
 $pageTitle = __('Browse Collections');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
+<link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+<style>
+.slider img {
+    height: 100px;
+    width: 100px;
+}
 
-<h1><?php echo $pageTitle; ?></h1>
-<?php echo pagination_links(); ?>
+.slider li {
+    width: 125px;
+}
 
+.collectionContainer {
+    padding: 5px;
+    margin-bottom: 25px;
+}
+
+.section-title h1 {
+    font-family: 'Vollkorn';
+    font-size: 30pt;
+}
+
+@media (max-width: 480px) {
+  .section-title h1 {
+    font-size: 28pt;
+  }
+  }
+
+</style>
+
+<script type="text/javascript" src="http://diyhistory.ecn.uiowa.edu/transcribe/application/views/scripts/javascripts/jquery.bxSlider.min.js"></script>
+
+<div class="content">
+<div class="section-title"><h1><?php echo $pageTitle; ?></h1></div>
+<?php $collectionCount = 0 ?>
 <?php foreach (loop('collections') as $collection): ?>
 
-<div class="collection">
+    <div class="collectionContainer">
+        <?php 
+        $title = metadata('collection', array('Dublin Core', 'Title')); 
+        ?>
+                    
+        <h2><?php echo $title ?></h2>
+         <strong>(<?php echo link_to_collection('Browse all') ?>)</strong>
 
-    <h2><?php echo link_to_collection(); ?></h2>
+        <?php $items = get_records('Item', array('collection' => $collection->id), 9000); 
+        set_loop_records('Item', $items);
+        ?>
 
-    <?php if (metadata('collection', array('Dublin Core', 'Description'))): ?>
-    <div class="element">
-        <h3><?php echo __('Description'); ?></h3>
-        <div class="element-text"><?php echo text_to_paragraphs(metadata('collection', array('Dublin Core', 'Description'), array('snippet'=>150))); ?></div>
+        <ul class="collection<?php echo $collectionCount ?> slider">
+
+        <?php foreach (loop('items') as $item): ?>
+
+            <?php set_current_record('item', $item); ?>
+            
+              <li><?php echo link_to_item(item_image('square_thumbnail'), array('rel' => 'tooltip')); ?></li>
+
+        
+        <?php endforeach ?>
+        <?php $collectionCount++; ?>
+        </ul>
     </div>
-    <?php endif; ?>
 
-    <?php if ($collection->hasContributor()): ?>
-    <div class="element">
-        <h3><?php echo __('Contributors'); ?></h3>
-        <div class="element-text">
-            <p><?php echo metadata('collection', array('Dublin Core', 'Contributor'), array('all'=>true, 'delimiter'=>', ')); ?></p>
-        </div>
-    </div>
-    <?php endif; ?>
-
-    <p class="view-items-link"><?php echo link_to_items_browse(__('View the items in %s', metadata('collection', array('Dublin Core', 'Title'))), array('collection' => metadata('collection', 'id'))); ?></p>
-
-    <?php fire_plugin_hook('public_collections_browse_each', array('view' => $this, 'collection' => $collection)); ?>
-
-</div><!-- end class="collection" -->
-
-<?php endforeach; ?>
-
+<?php endforeach ?>
 <?php echo pagination_links(); ?>
+
+<script>
+$(document).ready(function(){
+    noOfCollections = <?php echo count(get_records('Collection')); ?>;
+    for (i = 0; i < noOfCollections; i++){
+        //How collection is referred to in the DOM
+        collectionHandle = '.collection' + i;
+
+       $(collectionHandle).bxSlider({
+        displaySlideQty: 7,
+        moveSlideQty: 7
+       });
+    }
+
+});
+   console.log("HITS THIS PART");
+</script>
 
 <?php fire_plugin_hook('public_collections_browse', array('collections'=>$collections, 'view' => $this)); ?>
 
 <?php echo foot(); ?>
+</div><!-- end content -->

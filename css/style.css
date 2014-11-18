@@ -1253,7 +1253,8 @@ ul.tabs li a:hover, ul.tabs li.active a {
 }
 
 #wrapper {
-	margin-left: 30px;
+	margin-left: 3%;
+	margin-right: 3%;
 }
 
 
@@ -1272,7 +1273,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 
 /*---------------iPad portrait---------------*/
 @media only screen and (min-width: 767px) and (max-width: 959px) {
-.header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 4%; }
+
 .header .social-bookmarks {  }
 .google-map { height: 300px; }
 .error .left, .error .right { padding-top: 250px; padding-bottom: 250px; }
@@ -1469,4 +1470,28 @@ img {
 .portfolio-grid img, .transcription-item img {
 	height: 200px;
 	width: 200px;
+}
+
+/* bxslider */
+
+.bx-next {
+    position:absolute;
+    top:40%;
+    right:-35px;
+    z-index:999;
+    width: 30px;
+    height: 30px;
+    text-indent: -999999px;
+    background: url(../images/gray_next.png) no-repeat 0 -30px;
+}
+
+.bx-prev {
+    position:absolute;
+    top:40%;
+    left:-25px;
+    z-index:999;
+    width: 30px;
+    height: 30px;
+    text-indent: -999999px;
+    background: url(../images/gray_prev.png) no-repeat 0 -30px;
 }
