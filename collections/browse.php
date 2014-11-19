@@ -54,9 +54,10 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
         <?php foreach (loop('items') as $item): ?>
 
-            <?php set_current_record('item', $item); ?>
+              <?php set_current_record('item', $item); 
+              $title = metadata('item', array('Dublin Core', 'Title')); ?>
             
-              <li><?php echo link_to_item(item_image('square_thumbnail'), array('rel' => 'tooltip')); ?></li>
+              <li ><?php echo link_to_item(item_image('square_thumbnail'), array('data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => $title)); ?></li>
 
         
         <?php endforeach ?>
@@ -79,9 +80,10 @@ $(document).ready(function(){
         moveSlideQty: 7
        });
     }
+    $('[data-toggle="tooltip"]').tooltip({delay: {show: 450, hide: 450}})
 
 });
-   console.log("HITS THIS PART");
+
 </script>
 
 <?php fire_plugin_hook('public_collections_browse', array('collections'=>$collections, 'view' => $this)); ?>

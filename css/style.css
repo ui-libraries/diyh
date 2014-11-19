@@ -1495,3 +1495,7 @@ img {
     text-indent: -999999px;
     background: url(../images/gray_prev.png) no-repeat 0 -30px;
 }
+
+.tooltip {
+	position: fixed;
+}
