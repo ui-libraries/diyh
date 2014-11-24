@@ -459,7 +459,7 @@ a:hover {
 	font-size: 11px;
 	padding: 12px 15px;
 	margin: 0;
-	width: 150px;
+	width: 180px;
     background: #333; 
 }
 #primary-menu ul ul li a:hover { 
@@ -1346,6 +1346,11 @@ blockquote.left, blockquote.right {	width: 100%; }
 body.admin-bar {padding-top: 10px;}
 }
 
+@media only screen and (max-width: 350px) {
+	.header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 1%; }
+}
+
+
 /*--Omeka--*/
 
 #primary {
@@ -1482,19 +1487,30 @@ img {
 	background-clip: content-box;
 	padding-right: 25px;
 }
-
+/*
 #collectionMenuItemContainer {
 	background: url(../images/downArrow.png) no-repeat;
 	background-size: 15px 15px;
 	background-position: 178px 3px;
 }
 /*Firefox only*/
+/*
 @-moz-document url-prefix() { 
   #collectionMenuItemContainer {
     background-position: 173px 3px;
   }
+}*/
+
+
+#collectionMenuItemContainer:hover #downIcon {
+	fill: #bbb;
 }
 
+#downArrowWrapper {
+	left: 175px;
+	position: absolute;
+	bottom: 11px;
+}
 #recent-comments h2, #recent-transcriptions h2 {
 	margin-top: 10px;
 }
