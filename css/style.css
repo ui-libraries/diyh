@@ -1486,8 +1486,13 @@ img {
 #collectionMenuItemContainer {
 	background: url(../images/downArrow.png) no-repeat;
 	background-size: 15px 15px;
-	background-position-y: 3px;
-	background-position-x: 178px;
+	background-position: 178px 3px;
+}
+/*Firefox only*/
+@-moz-document url-prefix() { 
+  #collectionMenuItemContainer {
+    background-position: 173px 3px;
+  }
 }
 
 #recent-comments h2, #recent-transcriptions h2 {
