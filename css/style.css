@@ -1398,6 +1398,24 @@ h1 {
     right:0;
 }
 
+#callToActionBanner {
+	position: absolute;
+	top: 40%;
+	left: -20px;
+	width: 100%;
+	background-color: #1E1D1F;
+	opacity: .8;
+	padding: 10px;
+	line-height: 30px;
+	font-size: 24pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+#callToActionBanner a {
+	color: white;
+}
+
 #login-links a {
 	font-size: 1.3em;
 }
@@ -1461,6 +1479,14 @@ img {
 	background-color: #FFFFED;
 	border-radius: 3px;
 	background-clip: content-box;
+	padding-right: 25px;
+}
+
+#collectionMenuItemContainer {
+	background: url(../images/downArrow.png) no-repeat;
+	background-size: 15px 15px;
+	background-position-y: 3px;
+	background-position-x: 178px;
 }
 
 #recent-comments h2, #recent-transcriptions h2 {

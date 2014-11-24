@@ -4,13 +4,10 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 ?>
 <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
 <style>
-.slider img {
-    height: 100px;
-    width: 100px;
-}
+
 
 .slider li {
-    width: 125px;
+    width: 225px;
 }
 
 .collectionContainer {
@@ -33,7 +30,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
 
 <script type="text/javascript" src="http://diyhistory.ecn.uiowa.edu/transcribe/application/views/scripts/javascripts/jquery.bxSlider.min.js"></script>
 
-<div class="content">
+<div class="content coll-browse">
 <div class="section-title"><h1><?php echo $pageTitle; ?></h1></div>
 <?php $collectionCount = 0 ?>
 <?php foreach (loop('collections') as $collection): ?>
@@ -80,7 +77,7 @@ $(document).ready(function(){
         moveSlideQty: 7
        });
     }
-    $('[data-toggle="tooltip"]').tooltip({delay: {show: 450, hide: 450}})
+    $('[data-toggle="tooltip"]').tooltip({delay: {show: 425, hide: 425}})
 
 });
 

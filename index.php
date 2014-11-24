@@ -45,8 +45,7 @@
     });         
 </script>
 
-
-<div id="calltoaction"><a href="<?php echo WEB_ROOT;?>/transcribe/171/14458"><img src="<?php echo img('trynow.png'); ?>" alt="try now"></a></div>
+<div id="callToActionBanner"><a href="<?php echo WEB_ROOT;?>/collections/browse"><p>HISTORIANS NEED YOUR HELP!</p><p style="font-size: .8em;">improve access to historic documents by transcribing handwritten pages</p></a></div>
 
 <div id="slideshow"></div></div>    
 

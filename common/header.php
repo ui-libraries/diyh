@@ -60,7 +60,7 @@
                     
                 <ul class="menu">
 
-                    <li><a id="collectionMenuItem" href="#">Collections</a>       
+                    <li id="collectionMenuItemContainer"><a id="collectionMenuItem" href="#">Transcribe By Topic</a>       
                         <ul>                            
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/12">Pioneer Lives</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/13">World War II Diaries and Letters</a></li>
