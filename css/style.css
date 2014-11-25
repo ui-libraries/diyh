@@ -1291,7 +1291,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 /*---------------iPhone landscape---------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 body { -webkit-text-size-adjust: none; }
-#header-wrapper { position: relative; overflow: hidden; padding-bottom: 10px;}
+#header-wrapper { position: relative; overflow: hidden; padding-bottom: 15px;}
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
 .header .social-bookmarks {margin-top: 15px;}
 #back-top a { display:none; }
@@ -1318,7 +1318,7 @@ body { -webkit-text-size-adjust: none; }
 
 /*---------------iPhone portrait---------------*/
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-#header-wrapper { position: relative; overflow: hidden; padding-bottom: 10px; }
+#header-wrapper { position: relative; overflow: hidden; padding-bottom: 15px; }
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 3%; }
 #back-top a { display:none; }
 .header .social-bookmarks {margin-top: 15px;}
