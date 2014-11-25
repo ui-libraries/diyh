@@ -1310,10 +1310,9 @@ body { -webkit-text-size-adjust: none; }
 .footer-hidden-content .one, .footer-hidden-content .one-half, .footer-hidden-content .two-third, .footer-hidden-content .one-third, .footer-hidden-content .one-fourth {  margin-bottom: 50px; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 .section-title {margin-top: 5px;}
-#wrapper {margin-left: 0px;}
+#wrapper {margin-left: 0px; margin-right: 0px;}
 #logo {margin-bottom: 5px;}
 .login #wrapper { margin-left: 10px; margin-top: 0px; }
-body.admin-bar {padding-top: 10px;}
 }
 
 /*---------------iPhone portrait---------------*/
@@ -1341,9 +1340,8 @@ blockquote.left, blockquote.right {	width: 100%; }
 .footer-hidden-content .one, .footer-hidden-content .one-half, .footer-hidden-content .two-third, .footer-hidden-content .one-third, .footer-hidden-content .one-fourth {  margin-bottom: 50px; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
 .section-title {margin-top: 5px;}
-#wrapper {margin-left: 0px;}
+#wrapper {margin-left: 0px; margin-right: 0px;}
 .login #wrapper { margin-left: 0px; margin-top: 0px; }
-body.admin-bar {padding-top: 10px;}
 }
 
 @media only screen and (max-width: 350px) {
