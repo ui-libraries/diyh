@@ -25,6 +25,7 @@
     echo head_css(); ?> 
 
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900italic' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
     
     <?php queue_js_file('vendor/modernizr'); ?>
     <?php queue_js_file('vendor/jquery-1.4.4.min'); ?>

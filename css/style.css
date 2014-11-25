@@ -1310,7 +1310,7 @@ body { -webkit-text-size-adjust: none; }
 .footer .one, .footer .one-half, .footer .one-third, .footer .one-fouth { text-align: center; margin-bottom: 3px; }
 .footer-hidden-content .one, .footer-hidden-content .one-half, .footer-hidden-content .two-third, .footer-hidden-content .one-third, .footer-hidden-content .one-fourth {  margin-bottom: 50px; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
-.section-title {margin-top: 5px;}
+.section-title {margin-top: 20px;}
 #wrapper {margin-left: 0px; margin-right: 0px;}
 #logo {margin-bottom: 5px;}
 .login #wrapper { margin-left: 10px; margin-top: 0px; }
@@ -1319,7 +1319,7 @@ body { -webkit-text-size-adjust: none; }
 /*---------------iPhone portrait---------------*/
 @media only screen and (min-width: 320px) and (max-width: 479px) {
 #header-wrapper { position: relative; overflow: hidden; padding-bottom: 10px; }
-.header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
+.header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 3%; }
 #back-top a { display:none; }
 .header .social-bookmarks {margin-top: 15px;}
 #header-wrapper .social-bookmarks a {display:none;}
@@ -1340,13 +1340,13 @@ blockquote.left, blockquote.right {	width: 100%; }
 .footer .one, .footer .one-half, .footer .one-third, .footer .one-fouth { text-align: center; margin-bottom: 3px; }
 .footer-hidden-content .one, .footer-hidden-content .one-half, .footer-hidden-content .two-third, .footer-hidden-content .one-third, .footer-hidden-content .one-fourth {  margin-bottom: 50px; }
 .form {	border-bottom: 1px solid #eee;	padding: 0 0 25px 0; float: left; }
-.section-title {margin-top: 5px;}
+.section-title {margin-top: 20px;}
 #wrapper {margin-left: 0px; margin-right: 0px;}
 .login #wrapper { margin-left: 0px; margin-top: 0px; }
 }
 
 @media only screen and (max-width: 350px) {
-	.header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 1%; }
+	.header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 3%; }
 }
 
 
@@ -1470,9 +1470,14 @@ img {
 
 #logo { margin-right: 30px; }
 
+#searchbox a {
+	height: 28px;
+}
 
-#searchbox #query {
-	margin-right: 5px;
+#searchbox input[type="submit"] {
+line-height: 0px;
+margin-left: -10px;
+margin-right: 5px;
 }
 
 #searchbox input {
@@ -1480,8 +1485,9 @@ img {
 	color: black;
 	height: 100%;
 	margin-bottom: 0px;
-	height: 30px;
+	height: 28px;
 }
+
 #primary-menu #collectionMenuItem { 
 	font-weight: bold;
 	font-size: 1.2em;
