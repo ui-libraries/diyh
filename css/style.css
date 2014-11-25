@@ -308,7 +308,8 @@ a:hover {
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	padding: 25px 0;
+	padding-top: 5px;
+	padding-bottom: 15px;
 	background-color: #fff;
 	opacity:0.97;
 	filter:alpha(opacity=97);
@@ -1290,7 +1291,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 /*---------------iPhone landscape---------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 body { -webkit-text-size-adjust: none; }
-#header-wrapper { position: relative; overflow: hidden;}
+#header-wrapper { position: relative; overflow: hidden; padding-bottom: 10px;}
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
 .header .social-bookmarks {margin-top: 15px;}
 #back-top a { display:none; }
@@ -1317,7 +1318,7 @@ body { -webkit-text-size-adjust: none; }
 
 /*---------------iPhone portrait---------------*/
 @media only screen and (min-width: 320px) and (max-width: 479px) {
-#header-wrapper { position: relative; overflow: hidden; }
+#header-wrapper { position: relative; overflow: hidden; padding-bottom: 10px; }
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
 #back-top a { display:none; }
 .header .social-bookmarks {margin-top: 15px;}
@@ -1469,6 +1470,7 @@ img {
 
 #logo { margin-right: 30px; }
 
+
 #searchbox #query {
 	margin-right: 5px;
 }
@@ -1476,6 +1478,9 @@ img {
 #searchbox input {
 	border-color: lightgrey;
 	color: black;
+	height: 100%;
+	margin-bottom: 0px;
+	height: 30px;
 }
 #primary-menu #collectionMenuItem { 
 	font-weight: bold;
