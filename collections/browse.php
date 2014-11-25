@@ -20,6 +20,11 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
     font-size: 30pt;
 }
 
+.browse-link {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 @media (max-width: 480px) {
   .section-title h1 {
     font-size: 28pt;
@@ -41,7 +46,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
         ?>
                     
         <h2><?php echo $title ?></h2>
-         <strong>(<?php echo link_to_collection('Browse all') ?>)</strong>
+         <strong class="browse-link">(<?php echo link_to_collection('Browse all') ?>)</strong>
 
         <?php $items = get_records('Item', array('collection' => $collection->id), 9000); 
         set_loop_records('Item', $items);

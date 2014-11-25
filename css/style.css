@@ -349,15 +349,15 @@ a:hover {
 	font-size: 11px;
 	position: relative;
 	z-index: 1000;
-	width: 31px;
-	height: 31px;
+	width: 28px;
+	height: 28px;
 	float: right;
 	margin: 7px 1px 2px 0;
 	padding: 0px;
-	background: url(../images/sprite.png) no-repeat scroll 9px -540px #333;
+	background: url(../images/sprite.png) no-repeat scroll 7px -542px #333;
 	-moz-border-radius: 2px;
-	-webkit-border-radius:2px;
-	border-radius:2px;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
 	text-indent: -9999px;
 }
 #back-top a:hover {
@@ -1469,6 +1469,10 @@ img {
 }
 
 #logo { margin-right: 30px; }
+
+#searchbox {
+	margin-left: 5px;
+}
 
 #searchbox a {
 	height: 28px;
