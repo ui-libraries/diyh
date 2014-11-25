@@ -1291,6 +1291,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 /*---------------iPhone landscape---------------*/
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 body { -webkit-text-size-adjust: none; }
+body.login {padding-top: 0px;}
 #header-wrapper { position: relative; overflow: hidden; padding-bottom: 15px;}
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 5%; }
 .header .social-bookmarks {margin-top: 15px;}
@@ -1313,11 +1314,12 @@ body { -webkit-text-size-adjust: none; }
 .section-title {margin-top: 20px;}
 #wrapper {margin-left: 0px; margin-right: 0px;}
 #logo {margin-bottom: 5px;}
-.login #wrapper { margin-left: 10px; margin-top: 0px; }
+.login #wrapper { margin-left: 0px; margin-top: 0px; }
 }
 
 /*---------------iPhone portrait---------------*/
 @media only screen and (min-width: 320px) and (max-width: 479px) {
+body.login {padding-top: 0px;}
 #header-wrapper { position: relative; overflow: hidden; padding-bottom: 15px; }
 .header, .content, .footer, .footer-content, .footer-hidden-content { margin: 0 3%; }
 #back-top a { display:none; }
