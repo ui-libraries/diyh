@@ -2,7 +2,8 @@
 $pageTitle = __('Search Omeka ') . __('(%s total)', $total_results);
 echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
 ?>
-<br /><br /><br /><br /><h1> Search Results </h1>
+<div class="content">
+<h1> Search Results </h1>
 <?php echo search_form(array('show_advanced' => true)); ?> 
 <?php if ($total_results): ?>
 <?php echo pagination_links(); ?>
@@ -57,4 +58,5 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
     <p><?php echo __('Your query returned no results.');?></p>
 </div>
 <?php endif; ?>
+</div>
 <?php echo foot(); ?>
