@@ -318,6 +318,8 @@ a:hover {
 .header {
 	margin: 0 2%;
 }
+
+
 #logo, #logo a {
 	float: left;
 	margin: 0;
@@ -1271,6 +1273,11 @@ ul.tabs li a:hover, ul.tabs li.active a {
 
 #searchbox {
 	margin-left: 5px;
+}
+
+#searchbox label {
+	visibility: hidden;
+	position: absolute;
 }
 
 #searchbox a {

@@ -54,14 +54,14 @@
         <div class="header">    
             
             <div id="logo">
-                <a href="<?php echo WEB_ROOT; ?>"><img src="<?php echo img('logo.png'); ?>" alt="" /></a>   
+                <a href="<?php echo WEB_ROOT; ?>"><img src="<?php echo img('logo.png'); ?>" alt="Back to DIYHistory homepage" /></a>   
             </div><!--END LOGO-->
             
             <div id="primary-menu">
                     
                 <ul class="menu">
 
-                    <li id="collectionMenuItemContainer"><a id="collectionMenuItem" href="#">Transcribe By Topic<span id="downArrowWrapper"><?php include ('themes/diyh/images/downArrow.svg') ?></span></a>       
+                    <li id="collectionMenuItemContainer"><a id="collectionMenuItem" href="<?php echo WEB_ROOT;?>/collections/browse">Transcribe By Topic<span id="downArrowWrapper"><?php include ('themes/diyh/images/downArrow.svg') ?></span></a>       
                         <ul>                            
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/12">Pioneer Lives</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/13">World War II Diaries and Letters</a></li>
@@ -96,7 +96,7 @@
             </div><!--END PRIMARY MENU-->   
                             
             <ul class="social-bookmarks">
-                <li><div id="searchbox"><?php echo search_form(array('show_advanced' => false)); ?></div></li>       
+                <li><div id="searchbox"><label for="query">Search DIY Collections here</label><?php echo search_form(array('show_advanced' => false)); ?></div></li>
                 <li class="twitter"><a href="https://twitter.com/DIY_History">twitter</a></li>
                 <li class="rss"><a href="http://blog.lib.uiowa.edu/drp/">blog</a></li>                         
             </ul><!--END SOCIAL-BOOKMARKS-->
