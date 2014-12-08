@@ -1592,3 +1592,12 @@ img {
 	height: 40px;	
 }
 
+#tabskip {
+	position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+}

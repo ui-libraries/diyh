@@ -56,8 +56,13 @@
             <div id="logo">
                 <a href="<?php echo WEB_ROOT; ?>"><img src="<?php echo img('logo.png'); ?>" alt="Back to DIYHistory homepage" /></a>   
             </div><!--END LOGO-->
-            
-            <div id="primary-menu">
+            <?php $requestURI = Zend_Controller_Front::getInstance()->getRequest()->getRequestUri(); 
+            if ($requestURI != WEB_ROOT ){
+                echo '<a id="tabskip" href="#primary"></a>'; 
+            }
+            ?>
+
+            <nav id="primary-menu">
                     
                 <ul class="menu">
 
@@ -93,7 +98,7 @@
 
                 </ul><!--END UL MENU-->
                    
-            </div><!--END PRIMARY MENU-->   
+            </nav><!--END PRIMARY MENU-->   
                             
             <ul class="social-bookmarks">
                 <li><div id="searchbox"><label for="query">Search DIY Collections here</label><?php echo search_form(array('show_advanced' => false)); ?></div></li>
