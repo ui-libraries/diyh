@@ -1601,3 +1601,20 @@ img {
     text-align: left;
     overflow: hidden;
 }
+
+.smallHeader {
+	font-size: 16px;
+	margin-bottom: 5px;
+}
+
+.pagination_current  {
+float: left;
+padding: 4px 12px;
+line-height: 20px;
+text-decoration: none;
+background-color: #fff;
+border: 1px solid #ddd;
+border-left-width: 0;
+font-weight: bold;
+}
+

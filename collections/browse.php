@@ -68,7 +68,6 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
     </div>
 
 <?php endforeach ?>
-<?php echo pagination_links(); ?>
 
 <script>
 $(document).ready(function(){
