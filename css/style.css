@@ -1589,7 +1589,8 @@ img {
 #login-form input{
 	padding-top:12px;
 	padding-bottom:12px;
-	height: 40px;	
+	height: 40px;
+	line-height: 14px;	
 }
 
 #tabskip {
@@ -1616,5 +1617,31 @@ background-color: #fff;
 border: 1px solid #ddd;
 border-left-width: 0;
 font-weight: bold;
+}
+
+.pagination:first-of-type {
+	margin-bottom: 0px;
+}
+
+body.search input#query{
+	height:28px;
+}
+
+#search-form input[type="checkbox"], #search-form input[type="radio"]{
+	margin-right: 5px;
+}
+
+body.search input[type="submit"]{
+	margin-top: 14px;
+}
+
+#search-form p {
+	margin-top: 14px;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+#search-form a {
+	text-decoration: underline;
 }
 
