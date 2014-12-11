@@ -1295,7 +1295,7 @@ margin-right: 5px;
 	color: black;
 	height: 100%;
 	margin-bottom: 0px;
-	height: 28px;
+	height: 30px;
 }
 
 input[value="Search"] {
@@ -1586,7 +1586,7 @@ img {
 	position: fixed;
 }
 
-#login-form input[type="text"], #login-form input[type="password"], body.register input[type="text"], body.register input[type="password"]{
+#login-form input[type="text"], #login-form input[type="password"], body.register input[type="text"], body.register input[type="password"], #search-form input[type="text"]{
 	height: 30px;
 	line-height: 30px;	
 }
@@ -1621,16 +1621,23 @@ font-weight: bold;
 	margin-bottom: 0px;
 }
 
-body.search input#query{
-	height:28px;
-}
+
 
 #search-form input[type="checkbox"], #search-form input[type="radio"]{
 	margin-right: 5px;
 }
 
-body.search input[type="submit"]{
+body.search #primary input[type="submit"]{
 	margin-top: 14px;
+}
+
+#no-results {
+	margin-top: 10px;
+	font-size: 1.2em;
+	padding: 5px;
+	background-color: gray;
+	color: white;
+
 }
 
 #search-form p {

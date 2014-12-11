@@ -7,7 +7,7 @@
     <meta name="description" content="<?php echo $description; ?>" />
     <?php endif; ?>
 
-    <title>DIY History</title>
+    <title><?php echo option('site_title'); echo isset($title) ? ' | ' . strip_formatting($title) : ''; ?></title>
 
 
     <?php /*IMPORTANT: This line is necessary for GuestUserPlugin and any other plugins to look and work as they should on the front-end*/

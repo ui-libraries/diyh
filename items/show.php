@@ -3,9 +3,17 @@ $itemTitle = strip_formatting(metadata('item', array('Dublin Core', 'Title')));
 if ($itemTitle == '') {
     $itemTitle = __('[Untitled]');
 }
+
+$item = get_current_record('item');
+$collection_id = $item->collection_id;
+$collection = get_record_by_id('Collection', $collection_id);
+$collectionTitleElement = $collection->getElementTexts('Dublin Core', 'Title');
+$collectionTitle = $collectionTitleElement[0];
+$title = $collectionTitle . ' | ' . $itemTitle;
 ?>
 
-<?php echo head(array('title'=> $itemTitle, 'bodyclass' => 'items show')); ?>
+<?php echo head(array('title' => $title, 'bodyclass' => 'items show')); ?>
+
 
 <div id="primary">
 
