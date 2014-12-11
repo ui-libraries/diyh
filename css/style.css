@@ -1586,11 +1586,9 @@ img {
 	position: fixed;
 }
 
-#login-form input{
-	padding-top:12px;
-	padding-bottom:12px;
-	height: 40px;
-	line-height: 14px;	
+#login-form input[type="text"], #login-form input[type="password"], body.register input[type="text"], body.register input[type="password"]{
+	height: 30px;
+	line-height: 30px;	
 }
 
 #tabskip {
@@ -1645,3 +1643,21 @@ body.search input[type="submit"]{
 	text-decoration: underline;
 }
 
+.register label, .login label{
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+#login-form input[type="checkbox"] {
+-ms-transform: scale(1.3);
+-moz-transform: scale(1.3);
+-webkit-transform: scale(1.3);
+margin-left: 3px;
+-o-transform: scale(1.3); 
+
+}
+
+body.login .success {
+	position: absolute;
+	visibility:	hidden;
+}
