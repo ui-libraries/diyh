@@ -1586,7 +1586,7 @@ img {
 	position: fixed;
 }
 
-#login-form input[type="text"], #login-form input[type="password"], body.register input[type="text"], body.register input[type="password"], #search-form input[type="text"]{
+#login-form input[type="text"], #login-form input[type="password"], body.register .inputs > input[type="text"], body.register input[type="password"], #search-form input[type="text"]{
 	height: 30px;
 	line-height: 30px;	
 }
