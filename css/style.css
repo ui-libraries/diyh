@@ -1668,3 +1668,33 @@ body.login .success {
 	position: absolute;
 	visibility:	hidden;
 }
+
+#curl{
+    width:140px;
+    height:140px;
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+#curl:hover{
+    width:300px;
+    height:300px;
+     -webkit-transition: ease 1s;
+     -moz-transition: ease 1s;
+}
+#codez{
+    background:white;
+    overflow:hidden;
+    width:120px;
+    height:120px;
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+#codez:hover{
+	width:250px;
+    height:250px;
+    -webkit-transition: ease 1s;
+    -moz-transition: ease 1s;
+
+} 

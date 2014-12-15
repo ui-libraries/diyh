@@ -45,9 +45,12 @@
     });         
 </script>
 
-<div id="callToActionBanner"><a href="<?php echo WEB_ROOT;?>/collections/browse"><p>HISTORIANS NEED YOUR HELP!</p><p style="font-size: .8em;">improve access to historic documents by transcribing handwritten pages</p></a></div>
-
 <div id="slideshow"></div></div>    
+<div id="codez"><img src="<?php echo img('trynowpink.jpg'); ?>">
+    <a href="http://diyhistory.lib.uiowa.edu/diyh/transcribe/3455/92071">
+<img id="curl" src="<?php echo img('fold.png'); ?>">
+</a>
+</div> 
 
 
 
