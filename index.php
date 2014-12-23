@@ -33,13 +33,14 @@
             thumbnail_navigation    :   0,          // Thumbnail navigation
             slides                  :   [           // Slideshow Images
                                                     {image : '<?php echo img("letters.jpg"); ?>', title : 'Reading Letters'},
-                                                    {image : '<?php echo img("Eldist_Walls_and_sisters_in_front_of_house_1900s.jpg"); ?>', title : 'Eldist Walls and Sisters'},  
-                                                    {image : '<?php echo img("Recto.jpg"); ?>', title : 'Antiphonal [leaf]'}
+
                                         ],
-                                                
+
             // Theme Options               
             progress_bar            :   1,          // Timer for each slide                         
             mouse_scrub             :   0
+                                                
+
                     
         });
     });         
