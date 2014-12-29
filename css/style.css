@@ -419,7 +419,8 @@ a:hover {
 	margin: 0 5px;
 	padding: 0 3px 15px 3px;
 }
-#primary-menu ul li a:hover, #primary-menu ul li.sfHover a, #primary-menu ul li a.current {
+#primary-menu ul li a:hover, #primary-menu ul li.sfHover a, #primary-menu ul li a.current, #collectionMenuItemContainer:hover #downIcon {
+	fill: #bbb;
 	color: #bbb;
 }
 #primary-menu ul li span {
@@ -1538,11 +1539,6 @@ img {
     background-position: 173px 3px;
   }
 }*/
-
-
-#collectionMenuItemContainer:hover #downIcon {
-	fill: #bbb;
-}
 
 #downArrowWrapper {
 	left: 175px;
