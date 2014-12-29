@@ -26,6 +26,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:900italic' rel='stylesheet' type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Vollkorn" rel="stylesheet" type="text/css">
+
     
     <?php queue_js_file('vendor/modernizr'); ?>
     <?php queue_js_file('vendor/jquery-1.4.4.min'); ?>
@@ -83,8 +84,7 @@
                         echo '<li><a href="' . WEB_ROOT . '/guest-user/user/login">Login</a>';
                     }
                     else {
-                        $output = "<li><a href='" . WEB_ROOT . "/dashboard'>" . "Dashboard</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
-                        echo $output; 
+                        echo "<li><a href='" . WEB_ROOT . "/dashboard'>" . "<span id='newNotice'>New!</span>Dashboard</a></li><li><a href='" . WEB_ROOT . "/users/logout'>Logout</a></li>";
                     }
                     ?>
                     <li><a href="<?php echo WEB_ROOT;?>/about">About</a>

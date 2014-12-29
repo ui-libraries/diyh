@@ -1698,3 +1698,16 @@ body.login .success {
     -moz-transition: ease 1s;
 } 
 
+#primary-menu #newNotice { 
+	color: orange;
+	font-family: Arial;
+	border-width: 3px;
+	border-radius: 5px;
+	padding: 2px;
+	border-style: solid;
+	font-weight: bold;
+	font-style: italic;
+	text-transform: none;
+	margin-right: 6px;
+	font-size: 1.2em;
+}
