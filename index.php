@@ -32,7 +32,7 @@
             thumb_links             :   1,          // Individual thumb links for each slide
             thumbnail_navigation    :   0,          // Thumbnail navigation
             slides                  :   [           // Slideshow Images
-                                                    {image : '<?php echo img("letters.jpg"); ?>', title : 'Reading Letters'},
+                                                    {image : '<?php echo img("letters.jpg"); ?>', title : 'Reading Letters', alt: 'Homepage picture'},
 
                                         ],
 

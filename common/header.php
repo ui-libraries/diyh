@@ -57,17 +57,17 @@
             <div id="logo">
                 <a href="<?php echo WEB_ROOT; ?>"><img src="<?php echo img('logo.png'); ?>" alt="Back to DIYHistory homepage" /></a>   
             </div><!--END LOGO-->
-            <?php $requestURI = Zend_Controller_Front::getInstance()->getRequest()->getRequestUri(); 
-            if ($requestURI != WEB_ROOT ){
-                echo '<a id="tabskip" href="#primary"></a>'; 
+            <?php $requestURI = Zend_Controller_Front::getInstance()->getRequest()->getBasePath(); 
+            if ($requestURI != '/' ){
+                echo '<a id="tabskip" href="#primary">Skip down to content</a>'; 
             }
             ?>
 
             <nav id="primary-menu">
                     
                 <ul class="menu">
-
-                    <li id="collectionMenuItemContainer"><a id="collectionMenuItem" href="<?php echo WEB_ROOT;?>/collections/browse">Transcribe By Topic<span id="downArrowWrapper"><?php include ('themes/diyh/images/downArrow.svg') ?></span></a>       
+                    <li id="collectionMenuItemContainer"><a id="collectionMenuItem" href="<?php echo WEB_ROOT;?>/collections/browse">Transcribe By Topic<span id="downArrowWrapper"><?php include ('themes/diyh/images/downArrow.svg') ?></span></a> 
+                    <label for="collectionMenuItemContainer">Select a DIY collection</label>      
                         <ul>                            
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/12">Pioneer Lives</a></li>
                             <li><a href="<?php echo WEB_ROOT;?>/collections/show/13">World War II Diaries and Letters</a></li>
@@ -80,6 +80,7 @@
 
                         </ul>       
                     </li>
+
                     <?php if (!current_user()) {
                         echo '<li><a href="' . WEB_ROOT . '/guest-user/user/login">Login</a>';
                     }

@@ -45,7 +45,7 @@ echo head(array('title'=>$pageTitle,'bodyclass' => 'collections browse'));
         $title = metadata('collection', array('Dublin Core', 'Title')); 
         ?>
                     
-        <h2><?php echo $title ?></h2>
+        <h2><?php echo link_to_collection($title) ?></h2>
          <strong class="browse-link">(<?php echo link_to_collection('Browse all') ?>)</strong>
 
         <?php $items = get_records('Item', array('collection' => $collection->id), 9000); 
