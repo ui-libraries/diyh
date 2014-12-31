@@ -1276,7 +1276,7 @@ ul.tabs li a:hover, ul.tabs li.active a {
 	margin-left: 5px;
 }
 
-#searchbox label, #collectionMenuItemContainer label {
+#searchbox label, #collectionMenuItemContainer label, .hidden {
 	visibility: hidden;
 	position: absolute;
 	

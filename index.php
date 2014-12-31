@@ -48,7 +48,7 @@
 
 <div id="slideshow"></div></div>    
 <div id="codez"><img src="<?php echo img('trynowpink.jpg'); ?>">
-    <a href="http://diyhistory.lib.uiowa.edu/diyh/transcribe/3455/92071">
+    <a href="<?php echo WEB_ROOT ?>/transcribe/3455/92071">
 <img id="curl" src="<?php echo img('fold.png'); ?>">
 </a>
 </div> 
