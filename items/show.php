@@ -14,6 +14,7 @@ $title = $collectionTitle . ' | ' . $itemTitle;
 
 <?php echo head(array('title' => $title, 'bodyclass' => 'items show')); ?>
 
+<?php echo $this->partial('common/redirect.php') ?>
 
 <div id="primary">
 

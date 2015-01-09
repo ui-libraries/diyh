@@ -19,6 +19,7 @@ if ($collectionTitle == '') {
     
     </div><!--END SECTION TITLE-->   
     
+<?php echo $this->partial('common/redirect.php') ?>
 
 <div class="portfolio-grid">
     <ul id="thumbs">
