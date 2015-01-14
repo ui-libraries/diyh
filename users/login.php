@@ -562,7 +562,7 @@ hr.dotted {
                                 <h4 class="header">Use your account</h4>                                                        
                             </div> 
                             <div class="form-body">
-                                <form id="login-form" enctype="application/x-www-form-urlencoded" method="post" action="/omeka/users/login">
+                                <form id="login-form" enctype="application/x-www-form-urlencoded" method="post" action="<?php echo WEB_ROOT ?>/users/login">
                                     <fieldset id="fieldset-login">
                                       <div class="field">
                                         
@@ -602,7 +602,5 @@ hr.dotted {
 
 
 <?php echo flash(); ?>
-    
 
 
-<?php echo foot(array(), $footer); ?>
