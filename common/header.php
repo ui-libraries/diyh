@@ -21,6 +21,7 @@
     queue_css_file('supersized');
     queue_css_file('bootstrap.min');
     queue_css_file('style');
+    queue_css_file('forms');
 
     echo head_css(); ?> 
 
