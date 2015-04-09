@@ -1,105 +1,104 @@
 <?php echo head(); ?>
-<style type="text/css">
-body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-}
 
-#primary {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-    width: 50%;
-    margin: 0 auto;
+<script type="text/javascript">         
+    jQuery(function($){             
+        $.supersized({              
+            // Functionality
+            slideshow               :   0,          // Slideshow on/off
+            autoplay                :   0,          // Slideshow starts playing automatically
+            start_slide             :   1,          // Start slide (0 is random)
+            stop_loop               :   0,          // Pauses slideshow on last slide
+            random                  :   0,          // Randomize slide order (Ignores start slide)
+            slide_interval          :   13000,       // Length between transitions
+            transition              :   1,          // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+            transition_speed        :   1000,       // Speed of transition
+            new_window              :   0,          // Image links open in new window/tab
+            pause_hover             :   0,          // Pause slideshow on hover
+            keyboard_nav            :   1,          // Keyboard navigation on/off
+            performance             :   1,          // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+            image_protect           :   1,          // Disables image dragging and right click with Javascript
+                                                               
+            // Size & Position                         
+            min_width               :   0,          // Min width allowed (in pixels)
+            min_height              :   0,          // Min height allowed (in pixels)
+            vertical_center         :   1,          // Vertically center background
+            horizontal_center       :   1,          // Horizontally center background
+            fit_always              :   0,          // Image will never exceed browser width or height (Ignores min. dimensions)
+            fit_portrait            :   1,          // Portrait images will not exceed browser height
+            fit_landscape           :   0,          // Landscape images will not exceed browser width
+                                                               
+            // Components                           
+            slide_links             :   'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+            thumb_links             :   1,          // Individual thumb links for each slide
+            thumbnail_navigation    :   0,          // Thumbnail navigation
+            slides                  :   [           // Slideshow Images
+                                                    {image : '<?php echo img("front.jpg"); ?>', title : 'Reading Letters', alt: 'Homepage picture'},
 
-}
+                                        ],
 
-h1 {
-    width: 50%;
-    margin: 0 auto;
-}
+            // Theme Options               
+            progress_bar            :   1,          // Timer for each slide                         
+            mouse_scrub             :   0
+                                                
 
-#contact_form {
-      padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-  width: 100%;
-    width: 50%;
-    margin: 0 auto;
-}
-
-#simple-contact {
-      padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-  width: 100%;
-    width: 50%;
-    margin: 0 auto;
-}
-
-#wrapper #primary {
-  width: 100%;
-  margin-top: 80px;
-}
-
-@media (max-width: 767px) {
-  #wrapper #primary {
-    margin-top: 0px;
-  }
-}
+                    
+        });
+    });         
+</script>
 
 </style>
 
-<div id="primary">
-    <h1><?php echo html_escape(get_option('simple_contact_form_contact_page_title')); ?></h1>
-<div id="simple-contact">
-    <div id="form-instructions">
-        <?php echo get_option('simple_contact_form_contact_page_instructions'); // HTML ?>
+<div class="block blur2 section-title">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="clear-form">
+                        <div class="form-heading">
+                            <h3 class="header">Contact Us</h3>
+                            <hr/>
+                        </div>
+                       
+                        
+                          <div id="form-heading">
+                              
+                             <div class="form-body">
+                              <form name="contact_form" id="contact-form"  method="post" enctype="multipart/form-data" accept-charset="utf-8">
+
+                                  <fieldset>
+                                  <div class="field">
+                                 
+                                          
+                                      <input type="text" class="input-block-level" name="name" id="name" placeholder="Your name">  
+                                       
+                                      <input type="text" class="input-block-level" name="email" id="email" placeholder="Your email">  
+                                      <textarea name="message" id="message" class="textinput" rows="10" cols="80" placeholder="Your message" style="width: 100%";></textarea>
+                     
+                                  
+                                  </fieldset>
+
+
+                                  <fieldset>
+                                  <?php if ($captcha): ?>
+                                  <div class="field">
+                                      <?php echo $captcha; ?>
+                                  </div>
+                                  <?php endif; ?>
+
+                                  <div class="field" style="margin: 20px;">                                    
+                                    <?php echo '<input type="submit" name="send" id="send" class="btn btn-large btn-blue btn-block" value="Send Message">'; ?>
+                                  </div>
+                                  
+                                  </fieldset>
+                              </form>
+                            </div>                          
+                          </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <?php echo flash(); ?>
-    <form name="contact_form" id="contact-form"  method="post" enctype="multipart/form-data" accept-charset="utf-8">
 
-        <fieldset>
-        <div class="field">
-        <?php echo $this->formLabel('name', 'Your Name: '); ?>
-            <div class='inputs'>
-            <?php echo $this->formText('name', $name, array('class'=>'textinput')); ?>
-            </div>
-        </div>
-        
-        <div class="field">
-            <?php echo $this->formLabel('email', 'Your Email: '); ?>
-            <div class='inputs'>
-                <?php echo $this->formText('email', $email, array('class'=>'textinput'));  ?>
-            </div>
-        </div>
-        
-        <div class="field">
-          <?php echo $this->formLabel('message', 'Your Message: '); ?>
-          <div class='inputs'>
-          <?php echo $this->formTextarea('message', $message, array('class'=>'textinput', 'rows' => '10')); ?>
-          </div>
-        </div>
-        
-        </fieldset>
+<div id="slideshow"></div></div> 
+
+<?php echo flash(); ?>
 
 
-        <fieldset>
-        <?php if ($captcha): ?>
-        <div class="field">
-            <?php echo $captcha; ?>
-        </div>
-        <?php endif; ?>
-
-        <div class="field">
-          <?php echo $this->formSubmit('send', 'Send Message'); ?>
-        </div>
-        
-        </fieldset>
-    </form>
-
-</div>
-
-</div>
-<?php echo foot();
